@@ -22,3 +22,4 @@ package-lock.json
 # Env
 .env
 mobile/.env
+mobile/.env.example

@@ -21,6 +21,8 @@ const statusData = [
   { id: '2', name: 'Mike', emoji: '🙂', avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=60' },
   { id: '3', name: 'Emma', emoji: '🎉', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=60' },
   { id: '4', name: 'David', emoji: '❤️', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=60' },
+  { id: '5', name: 'Lee', emoji: '🙂', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=80&q=60' },
+
 ];
 
 const posts = [
@@ -51,6 +53,15 @@ const posts = [
     likes: 30,
     comments: 9,
   },
+    {
+    id: 'p4',
+    author: 'Anonymous #89',
+    time: '6 hours ago',
+    emoji: '🎉',
+    text: 'Shared a great chat with a friend. Feeling seen and heard today.',
+    likes: 30,
+    comments: 9,
+  },
 ];
 
 export function FeedScreen({ role }: Props) {
@@ -58,7 +69,7 @@ export function FeedScreen({ role }: Props) {
     <View style={styles.screen}>
       <View style={styles.topBar}>
         <View style={styles.brandRow}>
-          <Image source={require('../../../assets/ocare.png')} style={styles.logo} />
+          <Image source={require('../../../assets/ocare-copy.png')} style={styles.logo} />
           <View>
             <Text style={styles.feedTitle}>Whisper Feed</Text>
           </View>
@@ -83,7 +94,11 @@ export function FeedScreen({ role }: Props) {
                 {status.avatar ? (
                   <View style={styles.statusAvatarWrap}>
                     <Image source={{ uri: status.avatar }} style={styles.statusAvatar} />
-                    {status.emoji ? <Text style={styles.statusEmoji}>{status.emoji}</Text> : null}
+                    {status.emoji ? (
+                      <View style={styles.statusEmojiBubble}>
+                        <Text style={styles.statusEmoji}>{status.emoji}</Text>
+                      </View>
+                    ) : null}
                   </View>
                 ) : (
                   <View style={styles.statusAdd}>
@@ -131,19 +146,24 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingTop: spacing.xxl + spacing.xxl,
+    paddingTop: spacing.xxl + spacing.lg,
   },
   container: {
-    padding: spacing.xl,
-    paddingTop: spacing.xxl + spacing.lg,
+    padding: spacing.md,
+    paddingTop: spacing.lg,
     gap: spacing.lg,
   },
   topBar: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: spacing.lg,
+    marginBottom: spacing.sm,
     paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.sm,
+    backgroundColor: colors.surface,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#e5e7eb',
+    zIndex: 5,
   },
   brandRow: {
     flexDirection: 'row',
@@ -151,8 +171,9 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   logo: {
-    width: 42,
-    height: 42,
+    width: 40,
+    height: 40,
+    borderRadius: 22,
     resizeMode: 'contain',
   },
   feedTitle: {
@@ -171,14 +192,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#e11d48',
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.,
     shadowOffset: { width: 0, height: 8 },
     shadowRadius: 12,
-    elevation: 4,
+    elevation: 6,
   },
   statusRow: {
-    gap: spacing.lg,
-    paddingBottom: spacing.xl,
+    gap: spacing.xs,
+    paddingBottom: spacing.lg,
   },
   statusItem: {
     alignItems: 'center',
@@ -186,24 +207,27 @@ const styles = StyleSheet.create({
     gap: spacing.xs,
   },
   statusAvatarWrap: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
+    width: 68,
+    height: 68,
+    borderRadius: 34,
     borderWidth: 2,
     borderColor: colors.brand,
-    overflow: 'hidden',
+    padding: 2,
+    backgroundColor: colors.surface,
+    overflow: 'visible',
     justifyContent: 'center',
     alignItems: 'center',
   },
   statusAvatar: {
     width: '100%',
     height: '100%',
+    borderRadius: 31,
   },
   statusAdd: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    borderWidth: 1.5,
+    width: 68,
+    height: 68,
+    borderRadius: 34,
+    borderWidth : 1.5,
     borderColor: colors.border,
     backgroundColor: '#f5f7fb',
     alignItems: 'center',
@@ -211,26 +235,38 @@ const styles = StyleSheet.create({
   },
   statusName: {
     color: colors.text,
-    fontSize: 12,
+    fontSize: 11,
   },
   statusEmoji: {
-    position: 'absolute',
-    bottom: -4,
-    right: -4,
     fontSize: 16,
+  },
+  statusEmojiBubble: {
+    position: 'absolute',
+    bottom: -8,
+    right: -10,
+    width: 26,
+    height: 26,
+    borderRadius: 14,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
   },
   card: {
     backgroundColor: colors.surface,
-    borderRadius: radius.lg,
+    borderRadius: radius.md,
     padding: spacing.xl,
     borderWidth: 1,
     borderColor: colors.border,
     shadowColor: '#000',
-    shadowOpacity: 0.03,
+    shadowOpacity: 0.02,
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 12,
     elevation: 1,
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xs,
   },
   cardHeader: {
     flexDirection: 'row',
@@ -262,8 +298,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.text,
-    fontSize: 16,
-    lineHeight: 22,
+    fontSize: 14,
+    lineHeight: 20,
     marginBottom: spacing.lg,
   },
   actions: {
