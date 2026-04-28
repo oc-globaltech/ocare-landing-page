@@ -1,0 +1,14 @@
+{
+  "name": "ocare-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OCare marketing landing page — static site deployed to Cloudflare Pages.",
+  "scripts": {
+    "dev": "wrangler pages dev . --port 4321",
+    "deploy": "wrangler pages deploy . --project-name ocare-landing",
+    "deploy:preview": "wrangler pages deploy . --project-name ocare-landing --branch preview"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

@@ -23,3 +23,7 @@ package-lock.json
 .env
 mobile/.env
 mobile/.env.example
+
+# Cloudflare / Wrangler
+.wrangler
+.dev.vars
