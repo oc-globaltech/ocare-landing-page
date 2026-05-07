@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, staging]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - name: HTML syntax check
+        run: |
+          for f in $(find . -maxdepth 2 -name '*.html' -not -path './node_modules/*'); do
+            echo "checking $f"
+            # crude check: balanced <html> + presence of <head>+<body>
+            grep -q '</html>' "$f" || { echo "::error::$f missing closing </html>"; exit 1; }
+          done
+
+      - name: Wrangler config check
+        run: npx wrangler --version

@@ -1,0 +1,78 @@
+name: Release Staging
+
+# Auto-deploys landing page to Cloudflare Pages "preview" branch on push to staging.
+# Tag scheme: vX.Y.Z-dev.N (parity w/ other Ocare repos).
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-staging-${{ github.repository }}
+  cancel-in-progress: true
+
+env:
+  SERVICE_NAME: landing-page
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Resolve next staging version
+        id: bump
+        run: |
+          set -euo pipefail
+          DEV="$(git tag --list 'v*.*.*-dev' | sed -E 's/^v(.+)-dev$/\1/' | sort -V | tail -n1 || true)"
+          PROD="$(git tag --list 'v*.*.*' | grep -Ev -- '-dev$' | sed -E 's/^v//' | sort -V | tail -n1 || true)"
+
+          if [[ -z "$DEV" && -z "$PROD" ]]; then
+            TARGET="0.1.0"
+          else
+            HIGHEST="$(printf '%s\n%s\n' "$DEV" "$PROD" | grep -v '^$' | sort -V | tail -n1)"
+            IFS=. read -r MA MI _ <<< "$HIGHEST"
+            TARGET="${MA}.$((MI+1)).0"
+          fi
+
+          echo "version=v${TARGET}-dev" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Pages (preview)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy . \
+            --project-name ocare-landing \
+            --branch preview \
+            --commit-hash "${{ github.sha }}" \
+            --commit-message "${{ steps.bump.outputs.version }}"
+
+      - name: Tag git
+        run: |
+          git config user.name  "ocare-ci-bot"
+          git config user.email "ci@ocgt.app"
+          git tag -a "${{ steps.bump.outputs.version }}" -m "Staging release ${{ steps.bump.outputs.version }}"
+          git push origin "${{ steps.bump.outputs.version }}"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Landing page staging ${{ steps.bump.outputs.version }}"
+            echo "- Cloudflare Pages preview branch updated"
+            echo "- Live at preview URL (see Cloudflare dashboard for hostname)"
+          } >> "$GITHUB_STEP_SUMMARY"
