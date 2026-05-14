@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#FF8800" />
+<meta name="color-scheme" content="light" />
+<title>Terms and Conditions — OCare</title>
+<meta name="description" content="OCare Terms and Conditions governing use of the OCare mobile application and administration dashboard by schools, staff, students, and parents." />
+<link rel="canonical" href="https://ocare.io/terms-and-conditions" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='a' cx='30%25' cy='20%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='%23FFD658'/%3E%3Cstop offset='55%25' stop-color='%23FF8800'/%3E%3Cstop offset='100%25' stop-color='%23743C00'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23a)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter Tight,sans-serif' font-weight='800' font-size='18' fill='white'%3EO%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Terms and Conditions — OCare" />
+<meta property="og:url" content="https://ocare.io/terms-and-conditions" />
+<meta property="og:site_name" content="OCare" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap">
+<style>
+  :root {
+    --deep-900: #3d1f00;
+    --deep-800: #5a2e00;
+    --deep-700: #743C00;
+    --orange:   #FF8800;
+    --peach:    #EF9A4A;
+    --gold:     #FFD658;
+    --cream:    #FDE3A6;
+    --ink-900:  #2a1600;
+    --ink-700:  #5a3a1a;
+    --ink-500:  #8f6a42;
+    --line:     #ecd9b9;
+    --line-2:   #f4e6cc;
+    --bg:       #F8F8F8;
+    --surface:  #ffffff;
+    --radius-sm: 10px;
+    --radius:    16px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 1px 2px rgba(116,60,0,0.06), 0 1px 1px rgba(116,60,0,0.04);
+    --shadow:    0 10px 30px -12px rgba(116,60,0,0.22), 0 2px 6px rgba(116,60,0,0.05);
+    --font-display: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --container: 880px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    color: var(--ink-900);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  a { color: var(--deep-700); }
+  a:hover { color: var(--orange); }
+
+  .nav-wrap {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(10px);
+    background: rgba(248,248,248,0.85);
+    border-bottom: 1px solid var(--line-2);
+  }
+  nav.bar {
+    max-width: 1200px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--deep-900); font-weight: 800;
+    font-family: var(--font-display); font-size: 18px;
+  }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: radial-gradient(120% 120% at 30% 20%, #FFD658 0%, #FF8800 55%, #743C00 100%);
+    display: grid; place-items: center; box-shadow: var(--shadow-sm);
+  }
+  .brand-mark img { width: 20px; height: 20px; display: block; }
+  .nav-back {
+    font-family: var(--font-body); font-weight: 600; font-size: 14px;
+    color: var(--ink-700); text-decoration: none;
+    padding: 8px 14px; border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    transition: 0.15s;
+  }
+  .nav-back:hover { color: var(--deep-900); border-color: var(--orange); }
+
+  .hero {
+    background:
+      radial-gradient(80% 60% at 90% 0%, rgba(255,214,88,0.35), transparent 60%),
+      radial-gradient(60% 50% at 0% 0%, rgba(253,227,166,0.6), transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--line-2);
+    padding: 56px 24px 36px;
+  }
+  .hero-inner { max-width: var(--container); margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--font-display); font-weight: 600; font-size: 13px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--deep-700);
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--deep-900);
+    margin: 8px 0 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .meta {
+    font-size: 14px; color: var(--ink-500); margin: 4px 0;
+  }
+  .meta strong { color: var(--ink-700); font-weight: 600; }
+
+  main { max-width: var(--container); margin: 0 auto; padding: 40px 24px 80px; }
+
+  .intro {
+    font-size: 16.5px;
+    color: var(--ink-900);
+    margin: 0 0 24px;
+  }
+
+  .callout {
+    background: linear-gradient(180deg, rgba(255,214,88,0.18), rgba(253,227,166,0.35));
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--orange);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 16px 0 28px;
+    font-size: 15px;
+  }
+  .callout strong { color: var(--deep-800); }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 0 0 36px;
+    box-shadow: var(--shadow-sm);
+  }
+  .toc h2 {
+    font-family: var(--font-display);
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-500); margin: 0 0 10px; font-weight: 700;
+  }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+  .toc li { margin-bottom: 4px; font-size: 14px; break-inside: avoid; }
+  .toc a { color: var(--deep-700); text-decoration: none; font-weight: 500; }
+  .toc a:hover { color: var(--orange); text-decoration: underline; }
+
+  section { margin-bottom: 32px; scroll-margin-top: 80px; }
+  section h2 {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 700; color: var(--deep-900);
+    margin: 8px 0 12px; letter-spacing: -0.005em;
+  }
+  section h3 {
+    font-family: var(--font-display);
+    font-size: 16px; font-weight: 700; color: var(--deep-800);
+    margin: 18px 0 6px;
+  }
+  section p, section ul, section ol { margin: 0 0 12px; color: var(--ink-900); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+
+  .uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--deep-800);
+  }
+
+  footer.site {
+    border-top: 1px solid var(--line-2);
+    background: var(--surface);
+    padding: 28px 24px 36px;
+    margin-top: 40px;
+  }
+  footer.site .container {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;
+    font-size: 13px; color: var(--ink-500);
+  }
+  footer.site a { color: var(--ink-700); text-decoration: none; margin-left: 16px; }
+  footer.site a:hover { color: var(--orange); }
+</style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="bar" aria-label="Primary">
+      <a href="/" class="brand" aria-label="OCare home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/ocare.png" alt=""></span>
+        <span>OCare</span>
+      </a>
+      <a href="/" class="nav-back">&larr; Back to home</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Legal</div>
+      <h1>Terms and Conditions</h1>
+      <p class="meta"><strong>Effective date:</strong> 14 May 2026</p>
+      <p class="meta"><strong>Last updated:</strong> 14 May 2026</p>
+      <p class="meta"><strong>Provider:</strong> OC Global Tech Sdn. Bhd., Kuala Lumpur, Malaysia</p>
+    </div>
+  </header>
+
+  <main>
+    <p class="intro">
+      These Terms and Conditions (the "<strong>Terms</strong>") form a binding agreement between you
+      ("<strong>you</strong>" or "<strong>User</strong>") and OC Global Tech Sdn. Bhd. ("<strong>OCare</strong>",
+      "we", "us", or "our"). They govern your access to and use of the OCare mobile application, the
+      OCare administration dashboard, the OCare APIs, and any related services (collectively, the
+      "<strong>Service</strong>"). By creating an account, downloading the app, or otherwise accessing
+      the Service, you agree to these Terms and to our
+      <a href="/privacy-policy">Privacy Policy</a>. If you do not agree, do not use the Service.
+    </p>
+
+    <div class="callout">
+      <strong>Important.</strong> OCare is a school safety and wellbeing tool. <strong>It is not a
+      replacement for emergency services or for professional mental-health care.</strong> In a
+      life-threatening emergency, contact your local emergency number (in Malaysia: 999) immediately.
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#acceptance">Acceptance &amp; Eligibility</a></li>
+        <li><a href="#accounts">Accounts &amp; Provisioning</a></li>
+        <li><a href="#license">Licence to Use the App</a></li>
+        <li><a href="#responsibilities">User Responsibilities &amp; Acceptable Use</a></li>
+        <li><a href="#content">Your Content</a></li>
+        <li><a href="#safety">SOS &amp; Safety Features</a></li>
+        <li><a href="#ai">AI Moderation &amp; Crisis Resources</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#ip">Intellectual Property</a></li>
+        <li><a href="#thirdparty">Third-Party Services</a></li>
+        <li><a href="#fees">Fees</a></li>
+        <li><a href="#availability">Service Availability &amp; Changes</a></li>
+        <li><a href="#disclaimer">Disclaimers</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#indemnity">Indemnity</a></li>
+        <li><a href="#suspension">Suspension &amp; Termination</a></li>
+        <li><a href="#stores">App Store Terms</a></li>
+        <li><a href="#export">Export Controls &amp; Sanctions</a></li>
+        <li><a href="#law">Governing Law &amp; Disputes</a></li>
+        <li><a href="#general">General Provisions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="acceptance">
+      <h2>1. Acceptance &amp; Eligibility</h2>
+      <p>
+        By accessing or using the Service you represent that: (a) you are at least 13 years old, or the
+        higher minimum age set by your local law; (b) you are authorised by a participating school or
+        institution (the "<strong>School</strong>") to use the Service; and (c) you have the legal
+        capacity to enter into these Terms (or a parent or guardian has agreed on your behalf where
+        required).
+      </p>
+      <p>
+        If you are using the Service on behalf of a School, you represent that you have authority to
+        bind that School to these Terms.
+      </p>
+    </section>
+
+    <section id="accounts">
+      <h2>2. Accounts &amp; Provisioning</h2>
+      <ul>
+        <li>Accounts are provisioned by School administrators. Self-registration is not available for student, parent, teacher, or coordinator roles.</li>
+        <li>You are responsible for maintaining the confidentiality of your credentials and for all activity under your account.</li>
+        <li>You must notify us promptly at <a href="mailto:security@ocare.io">security@ocare.io</a> of any unauthorised use or suspected compromise.</li>
+        <li>Account sharing, credential reuse, and impersonation are prohibited.</li>
+      </ul>
+    </section>
+
+    <section id="license">
+      <h2>3. Licence to Use the App</h2>
+      <p>
+        Subject to your compliance with these Terms, OCare grants you a limited, non-exclusive,
+        non-transferable, non-sublicensable, revocable licence to install and use the OCare mobile
+        application on a device you own or control, solely for the personal, internal, and educational
+        purpose of using the Service in connection with your School.
+      </p>
+      <p>You must not:</p>
+      <ul>
+        <li>Copy, modify, translate, or create derivative works of the Service.</li>
+        <li>Reverse engineer, decompile, or disassemble the Service except where permitted by law.</li>
+        <li>Sell, sublicense, rent, lease, or otherwise commercialise the Service.</li>
+        <li>Remove or alter any proprietary notices.</li>
+        <li>Use automated means (scrapers, bots) to access the Service.</li>
+        <li>Probe, scan, or test the vulnerability of the Service except via our security disclosure programme.</li>
+      </ul>
+    </section>
+
+    <section id="responsibilities">
+      <h2>4. User Responsibilities &amp; Acceptable Use</h2>
+      <p>You agree not to use the Service to:</p>
+      <ul>
+        <li>Post or transmit content that is unlawful, harassing, defamatory, abusive, threatening, hateful, or otherwise harmful.</li>
+        <li>Bully, intimidate, dox, or stalk any person.</li>
+        <li>Share sexually explicit content, content depicting minors in a sexual context (which we will report to authorities), or content promoting self-harm or suicide outside the support flow.</li>
+        <li>Misrepresent your identity, role, or affiliation with any School.</li>
+        <li>Upload malware, viruses, or any code intended to disrupt the Service.</li>
+        <li>Infringe intellectual-property, privacy, or publicity rights of others.</li>
+        <li>Circumvent security, authentication, or access controls.</li>
+        <li>Use the Service for advertising, fundraising, or commercial solicitation.</li>
+        <li>Violate any applicable law or regulation.</li>
+      </ul>
+      <p>Violations may result in content removal, account suspension or termination, and where
+      appropriate, referral to your School and to law-enforcement authorities.</p>
+    </section>
+
+    <section id="content">
+      <h2>5. Your Content</h2>
+      <h3>5.1 Ownership</h3>
+      <p>You retain all rights you have in the content you submit ("<strong>User Content</strong>"),
+      including diary entries, posts, messages, mood check-ins, and attachments.</p>
+      <h3>5.2 Licence to OCare</h3>
+      <p>
+        You grant OCare a worldwide, non-exclusive, royalty-free licence to host, store, reproduce,
+        transmit, display, adapt, and process your User Content solely to (a) operate, secure, and
+        improve the Service, (b) run the safety features described in Section 6 and 7, (c) make the
+        content visible to other users who are entitled to see it under your School's configuration,
+        and (d) comply with legal obligations. This licence ends when your User Content is deleted in
+        accordance with the <a href="/privacy-policy#retention">Privacy Policy</a>, except where
+        retention is required by law or to enforce these Terms.
+      </p>
+      <h3>5.3 Your responsibility</h3>
+      <p>You are solely responsible for your User Content and represent that you have all rights
+      necessary to grant the licence above. OCare does not endorse, verify, or assume responsibility
+      for User Content.</p>
+      <h3>5.4 Removal</h3>
+      <p>OCare may remove or restrict User Content that violates these Terms, applicable law, or your
+      School's policies. Where reasonable and lawful, we will notify the user.</p>
+    </section>
+
+    <section id="safety">
+      <h2>6. SOS &amp; Safety Features</h2>
+      <p>
+        The SOS feature is designed for genuine emergencies. False alerts may result in immediate
+        account suspension and referral to your School or relevant authorities.
+      </p>
+      <p class="uppercase">
+        OCare is not an emergency service. Do not rely on the Service to summon emergency help. In a
+        life-threatening emergency, contact 999 (Malaysia) or your local emergency number first.
+      </p>
+      <p>Delivery of SOS alerts depends on factors outside our control, including network coverage,
+      device state, and recipient availability.</p>
+    </section>
+
+    <section id="ai">
+      <h2>7. AI Moderation &amp; Crisis Resources</h2>
+      <p>
+        OCare runs automated content moderation on diary entries, posts, and chat messages. Details
+        of models, retention, and human oversight are in the
+        <a href="/privacy-policy#ai">Privacy Policy, Section 6</a>.
+      </p>
+      <ul>
+        <li>AI verdicts are advisory only and never trigger automated disciplinary action.</li>
+        <li>Coordinators and OCare administrators review elevated alerts manually.</li>
+        <li>You may dispute any AI verdict via the "Tell us this is wrong" control on the AI badge.</li>
+        <li>Crisis resources are shown in-app when an own diary entry is rated CRITICAL.</li>
+      </ul>
+      <p>The AI system is not a diagnostic tool. It does not replace assessment by a qualified
+      mental-health professional.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>8. Privacy</h2>
+      <p>
+        Our <a href="/privacy-policy">Privacy Policy</a> describes how we collect, use, and share
+        personal data, and is incorporated into these Terms by reference. By using the Service you
+        acknowledge that you have read and understood it.
+      </p>
+    </section>
+
+    <section id="ip">
+      <h2>9. Intellectual Property</h2>
+      <p>
+        All software, design, trademarks, logos, and content provided by OCare (excluding User Content)
+        are the property of OCare or its licensors and are protected by copyright, trademark, and
+        other laws. "OCare" and the OCare logo are trademarks of OC Global Tech Sdn. Bhd. No rights
+        are granted to you in respect of those marks except as expressly stated.
+      </p>
+      <h3>Feedback</h3>
+      <p>If you submit suggestions or feedback, you grant OCare a perpetual, irrevocable, royalty-free
+      licence to use them without restriction.</p>
+      <h3>Copyright complaints</h3>
+      <p>To report alleged copyright infringement, email
+      <a href="mailto:legal@ocare.io">legal@ocare.io</a> with: identification of the work,
+      identification of the allegedly infringing material, your contact information, a good-faith
+      statement, an accuracy statement, and your signature.</p>
+    </section>
+
+    <section id="thirdparty">
+      <h2>10. Third-Party Services</h2>
+      <p>
+        The Service relies on third-party providers (push notifications, email delivery, media storage,
+        hosting) listed in the <a href="/privacy-policy#sharing">Privacy Policy</a>. Their terms
+        and privacy notices govern your interaction with their services. OCare is not responsible for
+        third-party services, but we use commercially reasonable efforts to select providers with
+        appropriate security and privacy practices.
+      </p>
+    </section>
+
+    <section id="fees">
+      <h2>11. Fees</h2>
+      <p>
+        End users (students, parents, school staff) access the Service free of charge under a licence
+        held by their School. The commercial agreement between OCare and the School is separate from
+        these Terms. OCare may offer optional paid features in the future; any such features will be
+        clearly identified and subject to additional terms.
+      </p>
+    </section>
+
+    <section id="availability">
+      <h2>12. Service Availability &amp; Changes</h2>
+      <p>
+        We strive for high availability but do not guarantee uninterrupted access. Scheduled maintenance,
+        unscheduled outages, capacity limits, and dependencies on third-party networks may affect
+        availability.
+      </p>
+      <p>
+        We may add, modify, or remove features at any time. We will give reasonable notice of material
+        changes that materially reduce functionality available to end users.
+      </p>
+    </section>
+
+    <section id="disclaimer">
+      <h2>13. Disclaimers</h2>
+      <p class="uppercase">
+        The Service is provided "as is" and "as available" without warranties of any kind, whether
+        express, implied, or statutory, including warranties of merchantability, fitness for a
+        particular purpose, non-infringement, and any warranty arising out of course of dealing or
+        usage of trade.
+      </p>
+      <p>
+        Without limiting the foregoing, OCare does not warrant that the Service will be uninterrupted,
+        secure, error-free, or free of harmful components, that defects will be corrected, or that the
+        Service will meet your requirements. OCare disclaims any liability for actions or inaction by
+        users, schools, or third parties.
+      </p>
+    </section>
+
+    <section id="liability">
+      <h2>14. Limitation of Liability</h2>
+      <p class="uppercase">
+        To the maximum extent permitted by law, OCare and its officers, directors, employees, and
+        agents will not be liable for any indirect, incidental, special, consequential, exemplary, or
+        punitive damages, or any loss of profits, revenues, data, goodwill, or anticipated savings,
+        arising out of or in connection with the Service, whether based on warranty, contract, tort
+        (including negligence), statute, or any other legal theory.
+      </p>
+      <p>
+        OCare's aggregate liability arising out of or relating to these Terms or the Service will not
+        exceed the greater of (a) the fees paid by the School for the Service in the twelve months
+        preceding the event giving rise to liability, or (b) one hundred Malaysian Ringgit (RM 100).
+      </p>
+      <p>
+        Nothing in these Terms excludes or limits liability that cannot be excluded or limited under
+        applicable law, including liability for death or personal injury caused by negligence, fraud,
+        or fraudulent misrepresentation.
+      </p>
+    </section>
+
+    <section id="indemnity">
+      <h2>15. Indemnity</h2>
+      <p>
+        To the extent permitted by law, you agree to defend, indemnify, and hold harmless OCare and
+        its affiliates from any claim, liability, damage, loss, and expense (including reasonable
+        legal fees) arising from (a) your use of the Service, (b) your User Content, (c) your breach
+        of these Terms, or (d) your violation of any law or third-party right.
+      </p>
+    </section>
+
+    <section id="suspension">
+      <h2>16. Suspension &amp; Termination</h2>
+      <p>
+        We may suspend or terminate your access immediately and without notice if (a) you breach these
+        Terms, (b) we are required to do so by law, (c) your School directs us to, or (d) continued
+        access poses a security or safety risk.
+      </p>
+      <p>
+        You may stop using the Service at any time. You may delete your account from
+        <strong>Settings → Account → Delete Account</strong> or via
+        <a href="https://ocare.io/delete-account">https://ocare.io/delete-account</a>.
+        Sections that by their nature should survive termination will survive (including 5.2 licence
+        for retained content, 9, 13, 14, 15, and 19).
+      </p>
+    </section>
+
+    <section id="stores">
+      <h2>17. App Store Terms</h2>
+      <h3>17.1 Apple App Store</h3>
+      <p>
+        If you obtained the app from the Apple App Store: (a) these Terms are between you and OCare
+        only, not Apple, and Apple is not responsible for the app or its content; (b) the licence is
+        limited to use on Apple-branded products you own or control as permitted by the Apple Media
+        Services Terms; (c) Apple has no obligation to provide maintenance or support; (d) OCare is
+        solely responsible for any warranty and product claims; (e) Apple is not responsible for
+        addressing claims relating to the app, including product-liability and consumer-protection
+        claims; (f) Apple is not responsible for third-party intellectual-property claims; and
+        (g) Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce
+        them against you.
+      </p>
+      <h3>17.2 Google Play</h3>
+      <p>
+        If you obtained the app from Google Play, your use is also subject to the Google Play Terms of
+        Service. To the extent these Terms conflict with the Google Play Terms with respect to your
+        use of the app obtained from Google Play, the Google Play Terms control.
+      </p>
+    </section>
+
+    <section id="export">
+      <h2>18. Export Controls &amp; Sanctions</h2>
+      <p>
+        You represent that you are not located in, and are not a national or resident of, any country
+        subject to comprehensive sanctions by Malaysia, the United States, the European Union, or the
+        United Nations, and that you are not on any restricted-party list. You will not use, export,
+        or re-export the Service in violation of applicable export-control and sanctions laws.
+      </p>
+    </section>
+
+    <section id="law">
+      <h2>19. Governing Law &amp; Disputes</h2>
+      <p>
+        These Terms are governed by the laws of Malaysia, without regard to its conflict-of-laws
+        rules. The courts of Kuala Lumpur, Malaysia have exclusive jurisdiction over any dispute
+        arising out of or in connection with these Terms or the Service, except that either party
+        may seek injunctive relief in any court of competent jurisdiction.
+      </p>
+      <p>
+        Before initiating formal proceedings, the parties will attempt in good faith to resolve any
+        dispute by negotiation. Mandatory consumer-protection rights in your jurisdiction are not
+        affected by this section.
+      </p>
+    </section>
+
+    <section id="general">
+      <h2>20. General Provisions</h2>
+      <ul>
+        <li><strong>Entire agreement.</strong> These Terms, together with the Privacy Policy and any agreement between OCare and your School, constitute the entire agreement between you and OCare regarding the Service.</li>
+        <li><strong>Severability.</strong> If any provision is held unenforceable, the remaining provisions remain in full force.</li>
+        <li><strong>No waiver.</strong> Failure to enforce any provision is not a waiver of future enforcement.</li>
+        <li><strong>Assignment.</strong> You may not assign these Terms without our prior written consent. OCare may assign these Terms to an affiliate or in connection with a merger, acquisition, or sale of assets.</li>
+        <li><strong>Changes to these Terms.</strong> We may update these Terms from time to time. Material changes will be notified in the app and/or by email at least 14 days before they take effect. Continued use after the effective date constitutes acceptance.</li>
+        <li><strong>Notices to OCare.</strong> Send notices to <a href="mailto:legal@ocare.io">legal@ocare.io</a>.</li>
+        <li><strong>Force majeure.</strong> Neither party is liable for delays or failures caused by events beyond reasonable control.</li>
+        <li><strong>Language.</strong> The English version of these Terms is the controlling version. Translations are provided for convenience.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>21. Contact</h2>
+      <p>
+        <strong>OC Global Tech Sdn. Bhd.</strong><br />
+        Kuala Lumpur, Malaysia<br />
+        Legal: <a href="mailto:legal@ocare.io">legal@ocare.io</a><br />
+        Support: <a href="mailto:support@ocare.io">support@ocare.io</a><br />
+        Privacy: <a href="mailto:privacy@ocare.io">privacy@ocare.io</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <span>© 2026 OCare Inc. All rights reserved.</span>
+      <div>
+        <a href="/">Home</a>
+        <a href="/privacy-policy">Privacy</a>
+        <a href="/terms-and-conditions">Terms</a>
+        <a href="mailto:hello@ocare.io">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
