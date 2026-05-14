@@ -225,7 +225,8 @@
       <h1>Privacy Policy</h1>
       <p class="meta"><strong>Effective date:</strong> 14 May 2026</p>
       <p class="meta"><strong>Last updated:</strong> 14 May 2026</p>
-      <p class="meta"><strong>Data controller:</strong> OC Global Tech Sdn. Bhd., Malaysia</p>
+      <p class="meta"><strong>Operator / service provider:</strong> OC Global Tech Sdn. Bhd., Malaysia</p>
+      <p class="meta"><strong>Controller roles:</strong> Participating Schools are controllers for school-provisioned student, staff, and parent records. OCare is controller for account operations, security, support, and legal-compliance data.</p>
       <p class="meta"><strong>Applies to:</strong> OCare mobile application (iOS &amp; Android) and the OCare administration dashboard.</p>
     </div>
   </header>
@@ -245,7 +246,19 @@
       <strong>Summary for parents and guardians.</strong> OCare is a school safety and wellbeing app.
       We collect only what the School and the app need to keep students safe. We do not sell personal
       data. We do not use student content to train third-party AI models. You can review, correct, or
-      delete an account at any time — see Section 9.
+      delete an account at any time — see Section 10.
+    </div>
+
+    <div class="callout" style="border-left-color:#b91c1c;">
+      <strong>Not a medical device or emergency service.</strong> OCare is a wellbeing and safeguarding
+      support tool for schools. It is <strong>not</strong> a medical device, diagnostic tool,
+      emergency-response service, or substitute for professional counselling, medical advice, or
+      emergency assistance. AI-generated risk scores are screening signals only, may be inaccurate, and
+      are used to assist authorised human reviewers — never to make automated clinical, disciplinary, or
+      enforcement decisions. In a life-threatening emergency, contact your local emergency number
+      (Malaysia: 999) first. We do <strong>not</strong> display third-party advertising, do
+      <strong>not</strong> use personal data for advertising or marketing profiling, and do
+      <strong>not</strong> track users across apps or websites operated by other companies.
     </div>
 
     <nav class="toc" aria-label="Table of contents">
@@ -257,6 +270,7 @@
         <li><a href="#purposes">Purposes &amp; Legal Bases</a></li>
         <li><a href="#permissions">Device Permissions</a></li>
         <li><a href="#ai">AI Content Moderation</a></li>
+        <li><a href="#ugc">User-Generated Content Safety</a></li>
         <li><a href="#sharing">Disclosure &amp; Sub-processors</a></li>
         <li><a href="#transfers">International Transfers</a></li>
         <li><a href="#retention">Retention &amp; Deletion</a></li>
@@ -301,6 +315,7 @@
           <tr><td>Photos &amp; Media</td><td>Avatar uploads, post and message attachments, voice notes</td><td>Yes</td></tr>
           <tr><td>Usage Data</td><td>Screens viewed, feature interactions, crash logs, performance metrics</td><td>Yes</td></tr>
           <tr><td>Diagnostics</td><td>App version, OS, device model, error stack traces</td><td>Yes</td></tr>
+          <tr><td>Administrative &amp; audit data</td><td>Role, permissions, school affiliation, alert review actions, case escalation status, timestamps, IP/device/session logs, communications with support</td><td>Yes</td></tr>
         </tbody>
       </table>
       <p>We <strong>do not</strong> collect: precise GPS coordinates outside SOS, contacts list, calendar,
@@ -365,22 +380,30 @@
         <li>NLLB-200 (<code>facebook/nllb-200-distilled-600M</code>) — translation for Malay or Indonesian inputs so the English classifiers can run on a translated copy</li>
         <li>XLM-RoBERTa sentiment — dampens false positives on the original (untranslated) text</li>
       </ul>
+      <h3>In-app disclosure</h3>
+      <p>
+        Before students submit diary entries, posts, chat messages, mood check-ins, or SOS alerts,
+        OCare shows an in-app disclosure explaining that the content may be analysed by automated
+        safety systems and, if risk is detected, may be surfaced to authorised school coordinators or
+        administrators for human review. AI scores do not automatically create disciplinary action or
+        formal cases. The full disclosure is repeated during onboarding and remains accessible from
+        <strong>Settings → Privacy</strong>.
+      </p>
       <h3>What we send and what we keep</h3>
       <ul>
-        <li>Original text is sent to the AI service for classification and processed in memory only.</li>
-        <li>For verdicts at MEDIUM or higher, an internal admin alert is created. The alert stores
-        metadata (risk level, reason, content type and identifier, and a SHA-256 hash of the original
-        text) — it does <strong>not</strong> store the raw user content.</li>
+        <li>Original text is sent to the AI service for classification and is processed in memory only — the AI service does not write the content to durable storage.</li>
+        <li>The original diary entry, post, or chat message itself continues to live in the user's account in our main content database (PostgreSQL or MongoDB, depending on the feature). When an authorised coordinator opens an alert, the dashboard reads the original content from that primary store — not from a separate review copy.</li>
+        <li>For verdicts at MEDIUM or higher, an internal admin alert is created. The alert record stores only
+        metadata (risk level, reason, content type and a foreign-key identifier pointing back to the original record, and a SHA-256 hash of the analysed text) — the alert record itself does <strong>not</strong> contain the raw user content.</li>
         <li>Resolved alerts are purged after 90 days; unresolved alerts are retained until reviewed.</li>
-        <li>A short-lived encrypted queue may hold raw content for up to 30 days for human review when a
-        coordinator opens an alert. Outside that window, raw content is not retained.</li>
+        <li>If the underlying diary entry, post, or message is deleted by the user (or anonymised on account deletion), the dashboard view of any related alert loses access to the raw content at the same time, subject to backup overwrite (see Section 10).</li>
       </ul>
       <h3>Human oversight</h3>
       <p>
         Only named school coordinators and OCare administrators with role-based access can open alerts.
         AI verdicts <strong>never</strong> trigger automated disciplinary action; cases are escalated
         only by a human reviewer. You have the right to contest a verdict from any AI badge in the app
-        ("Tell us this is wrong"), and to request human review under Section 10.
+        ("Tell us this is wrong"), and to request human review under Section 11.
       </p>
       <h3>Crisis support</h3>
       <p>
@@ -390,8 +413,35 @@
       </p>
     </section>
 
+    <section id="ugc">
+      <h2>7. User-Generated Content Safety</h2>
+      <p>
+        OCare hosts user-generated content (posts, diary entries, chat messages, media attachments, and
+        voice notes). To reduce harm we combine automated filtering (see Section 6) with human moderation
+        and in-app safety controls.
+      </p>
+      <ul>
+        <li><strong>Report.</strong> Every post, chat message, and user profile has an in-app
+        <em>Report</em> control. Reports route to your School's coordinators and to OCare support.</li>
+        <li><strong>Block / mute.</strong> Users may block or mute other users from chat and feed
+        surfaces where the feature is available; school administrators may also restrict communications
+        between specific users.</li>
+        <li><strong>Review timelines.</strong> We aim to review reports flagged as urgent (self-harm,
+        threats, sexual content involving a minor) within 24 hours, and other reports within 7 days.
+        Content depicting minors in a sexual context is removed immediately and reported to the relevant
+        authorities.</li>
+        <li><strong>Escalation.</strong> Repeated or serious violations may result in content removal,
+        account suspension, School referral, or law-enforcement referral.</li>
+        <li><strong>Identity-linked.</strong> OCare does not provide anonymous public posting or random
+        chat with strangers. All communications are limited to users and roles authorised by the
+        participating School and are subject to School oversight.</li>
+      </ul>
+      <p>For urgent content-safety concerns email
+      <a href="mailto:support@ocare.io">support@ocare.io</a>.</p>
+    </section>
+
     <section id="sharing">
-      <h2>7. Disclosure &amp; Sub-processors</h2>
+      <h2>8. Disclosure &amp; Sub-processors</h2>
       <p>We <strong>do not sell</strong> personal data and <strong>do not share</strong> it for
       cross-context behavioural advertising. We disclose personal data only to:</p>
       <ul>
@@ -417,7 +467,7 @@
     </section>
 
     <section id="transfers">
-      <h2>8. International Transfers</h2>
+      <h2>9. International Transfers</h2>
       <p>
         Personal data is primarily hosted in Singapore. Some sub-processors (notably Firebase) may
         process data in the United States or European Union. Where data leaves Malaysia, the EEA, or
@@ -428,14 +478,14 @@
     </section>
 
     <section id="retention">
-      <h2>9. Retention &amp; Account Deletion</h2>
+      <h2>10. Retention &amp; Account Deletion</h2>
       <table>
         <thead><tr><th>Data</th><th>Retention</th></tr></thead>
         <tbody>
           <tr><td>Active account profile and content</td><td>Until account deletion or School termination</td></tr>
           <tr><td>Deleted account — soft-delete grace period</td><td>30 days, then permanent erasure</td></tr>
           <tr><td>Diary entries and private messages of a deleted account</td><td>Erased at end of 30-day grace period</td></tr>
-          <tr><td>Public posts authored by a deleted account</td><td>Author name removed; content preserved for shared context</td></tr>
+          <tr><td>Public posts authored by a deleted account</td><td>Author name and all personally identifiable information within the post are permanently removed/anonymised; only the de-identified text is preserved for shared context. @mentions of the deleted user are stripped.</td></tr>
           <tr><td>Resolved admin alerts (AI moderation)</td><td>90 days</td></tr>
           <tr><td>Unresolved admin alerts</td><td>Until reviewed</td></tr>
           <tr><td>Raw content held for human review</td><td>≤ 30 days, encrypted at rest</td></tr>
@@ -457,12 +507,12 @@
     </section>
 
     <section id="rights">
-      <h2>10. Your Rights</h2>
+      <h2>11. Your Rights</h2>
       <p>Subject to your jurisdiction you may have the right to:</p>
       <ul>
         <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
         <li><strong>Rectification</strong> — correct inaccurate or incomplete data.</li>
-        <li><strong>Erasure</strong> — request deletion (see Section 9).</li>
+        <li><strong>Erasure</strong> — request deletion (see Section 10).</li>
         <li><strong>Restriction</strong> — limit how we process your data.</li>
         <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
         <li><strong>Object</strong> — to processing based on legitimate interests, including automated decision-making.</li>
@@ -478,7 +528,7 @@
     </section>
 
     <section id="children">
-      <h2>11. Children &amp; Minimum Age</h2>
+      <h2>12. Children &amp; Minimum Age</h2>
       <p>
         OCare is intended for users aged <strong>13 and older</strong>. We do not knowingly create
         accounts for, or collect personal data from, children under 13.
@@ -507,7 +557,7 @@
     </section>
 
     <section id="security">
-      <h2>12. Security</h2>
+      <h2>13. Security</h2>
       <ul>
         <li>TLS 1.2+ for all data in transit; HSTS enforced.</li>
         <li>AES-256 encryption at rest for databases and backups.</li>
@@ -522,7 +572,7 @@
     </section>
 
     <section id="breach">
-      <h2>13. Data Breach Notification</h2>
+      <h2>14. Data Breach Notification</h2>
       <p>
         If we become aware of a personal-data breach likely to result in a risk to the rights and
         freedoms of natural persons, we will notify the affected School(s) without undue delay and,
@@ -532,7 +582,7 @@
     </section>
 
     <section id="regions">
-      <h2>14. Region-Specific Disclosures</h2>
+      <h2>15. Region-Specific Disclosures</h2>
       <h3>14.1 Malaysia (PDPA 2010)</h3>
       <p>
         We are registered with the Personal Data Protection Department where required. You may lodge a
@@ -560,7 +610,7 @@
     </section>
 
     <section id="changes">
-      <h2>15. Changes to This Policy</h2>
+      <h2>16. Changes to This Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. Material changes will be notified in the
         app and/or by email at least 14 days before they take effect. The "Last updated" date at the
@@ -570,7 +620,7 @@
     </section>
 
     <section id="contact">
-      <h2>16. Contact &amp; Complaints</h2>
+      <h2>17. Contact &amp; Complaints</h2>
       <p>
         <strong>Data controller:</strong> OC Global Tech Sdn. Bhd.<br />
         <strong>Privacy / DPO:</strong> <a href="mailto:privacy@ocare.io">privacy@ocare.io</a><br />
