@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#FF8800" />
+<meta name="color-scheme" content="light" />
+<title>End User Licence Agreement — OCare</title>
+<meta name="description" content="OCare End User Licence Agreement (EULA) governing installation and use of the OCare mobile application and administration dashboard." />
+<link rel="canonical" href="https://ocare.io/eula" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='a' cx='30%25' cy='20%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='%23FFD658'/%3E%3Cstop offset='55%25' stop-color='%23FF8800'/%3E%3Cstop offset='100%25' stop-color='%23743C00'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23a)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter Tight,sans-serif' font-weight='800' font-size='18' fill='white'%3EO%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="End User Licence Agreement — OCare" />
+<meta property="og:url" content="https://ocare.io/eula" />
+<meta property="og:site_name" content="OCare" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap">
+<style>
+  :root {
+    --deep-900: #3d1f00;
+    --deep-800: #5a2e00;
+    --deep-700: #743C00;
+    --orange:   #FF8800;
+    --peach:    #EF9A4A;
+    --gold:     #FFD658;
+    --cream:    #FDE3A6;
+    --ink-900:  #2a1600;
+    --ink-700:  #5a3a1a;
+    --ink-500:  #8f6a42;
+    --line:     #ecd9b9;
+    --line-2:   #f4e6cc;
+    --bg:       #F8F8F8;
+    --surface:  #ffffff;
+    --radius-sm: 10px;
+    --radius:    16px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 1px 2px rgba(116,60,0,0.06), 0 1px 1px rgba(116,60,0,0.04);
+    --shadow:    0 10px 30px -12px rgba(116,60,0,0.22), 0 2px 6px rgba(116,60,0,0.05);
+    --font-display: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --container: 880px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    color: var(--ink-900);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  a { color: var(--deep-700); }
+  a:hover { color: var(--orange); }
+
+  .nav-wrap {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(10px);
+    background: rgba(248,248,248,0.85);
+    border-bottom: 1px solid var(--line-2);
+  }
+  nav.bar {
+    max-width: 1200px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--deep-900); font-weight: 800;
+    font-family: var(--font-display); font-size: 18px;
+  }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: radial-gradient(120% 120% at 30% 20%, #FFD658 0%, #FF8800 55%, #743C00 100%);
+    display: grid; place-items: center; box-shadow: var(--shadow-sm);
+  }
+  .brand-mark img { width: 20px; height: 20px; display: block; }
+  .nav-back {
+    font-family: var(--font-body); font-weight: 600; font-size: 14px;
+    color: var(--ink-700); text-decoration: none;
+    padding: 8px 14px; border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    transition: 0.15s;
+  }
+  .nav-back:hover { color: var(--deep-900); border-color: var(--orange); }
+
+  .hero {
+    background:
+      radial-gradient(80% 60% at 90% 0%, rgba(255,214,88,0.35), transparent 60%),
+      radial-gradient(60% 50% at 0% 0%, rgba(253,227,166,0.6), transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--line-2);
+    padding: 56px 24px 36px;
+  }
+  .hero-inner { max-width: var(--container); margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--font-display); font-weight: 600; font-size: 13px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--deep-700);
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--deep-900);
+    margin: 8px 0 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .meta { font-size: 14px; color: var(--ink-500); margin: 4px 0; }
+  .meta strong { color: var(--ink-700); font-weight: 600; }
+
+  main { max-width: var(--container); margin: 0 auto; padding: 40px 24px 80px; }
+
+  .intro { font-size: 16.5px; color: var(--ink-900); margin: 0 0 24px; }
+
+  .callout {
+    background: linear-gradient(180deg, rgba(255,214,88,0.18), rgba(253,227,166,0.35));
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--orange);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 16px 0 28px;
+    font-size: 15px;
+  }
+  .callout strong { color: var(--deep-800); }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 0 0 36px;
+    box-shadow: var(--shadow-sm);
+  }
+  .toc h2 {
+    font-family: var(--font-display);
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-500); margin: 0 0 10px; font-weight: 700;
+  }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+  .toc li { margin-bottom: 4px; font-size: 14px; break-inside: avoid; }
+  .toc a { color: var(--deep-700); text-decoration: none; font-weight: 500; }
+  .toc a:hover { color: var(--orange); text-decoration: underline; }
+
+  section { margin-bottom: 32px; scroll-margin-top: 80px; }
+  section h2 {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 700; color: var(--deep-900);
+    margin: 8px 0 12px; letter-spacing: -0.005em;
+  }
+  section h3 {
+    font-family: var(--font-display);
+    font-size: 16px; font-weight: 700; color: var(--deep-800);
+    margin: 18px 0 6px;
+  }
+  section p, section ul, section ol { margin: 0 0 12px; color: var(--ink-900); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+
+  .uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--deep-800);
+  }
+
+  footer.site {
+    border-top: 1px solid var(--line-2);
+    background: var(--surface);
+    padding: 28px 24px 36px;
+    margin-top: 40px;
+  }
+  footer.site .container {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;
+    font-size: 13px; color: var(--ink-500);
+  }
+  footer.site a { color: var(--ink-700); text-decoration: none; margin-left: 16px; }
+  footer.site a:hover { color: var(--orange); }
+</style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="bar" aria-label="Primary">
+      <a href="/" class="brand" aria-label="OCare home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/ocare.png" alt=""></span>
+        <span>OCare</span>
+      </a>
+      <a href="/" class="nav-back">&larr; Back to home</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Legal</div>
+      <h1>End User Licence Agreement</h1>
+      <p class="meta"><strong>Effective date:</strong> 15 May 2026</p>
+      <p class="meta"><strong>Last updated:</strong> 15 May 2026</p>
+      <p class="meta"><strong>Licensor:</strong> OC Global Tech Sdn. Bhd., Kuala Lumpur, Malaysia</p>
+    </div>
+  </header>
+
+  <main>
+    <p class="intro">
+      This End User Licence Agreement (the "<strong>EULA</strong>") is a binding legal agreement between
+      you ("<strong>you</strong>", "<strong>your</strong>", or "<strong>Licensee</strong>") and
+      OC Global Tech Sdn. Bhd. ("<strong>OCare</strong>", "<strong>we</strong>",
+      "<strong>us</strong>", or "<strong>Licensor</strong>") governing your installation, access, and
+      use of the OCare mobile application, the OCare administration dashboard, and any associated
+      documentation, updates, and online services (collectively, the "<strong>Licensed
+      Application</strong>"). By downloading, installing, accessing, or using the Licensed Application,
+      you accept and agree to be bound by this EULA. If you do not agree, do not download, install, or
+      use the Licensed Application.
+    </p>
+
+    <div class="callout">
+      <strong>Zero-tolerance policy for objectionable content and abusive behaviour.</strong>
+      OCare does not tolerate objectionable content (including, without limitation, pornographic,
+      sexually explicit, child-sexual-abuse, hateful, harassing, threatening, or violent content) or
+      abusive users. We cannot pre-screen every transmission, but we provide in-app reporting, automated
+      and human moderation, blocking, and rapid takedown. Confirmed violations result in removal of the
+      content and ejection of the offending user from the Licensed Application within twenty-four (24)
+      hours of confirmation. See <a href="#objectionable">Section 7</a>.
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#acknowledgement">Acknowledgement</a></li>
+        <li><a href="#scope">Scope of Licence</a></li>
+        <li><a href="#restrictions">Restrictions</a></li>
+        <li><a href="#updates">Updates &amp; Maintenance</a></li>
+        <li><a href="#data">Consent to Use of Data</a></li>
+        <li><a href="#thirdparty">Third-Party Materials &amp; Services</a></li>
+        <li><a href="#objectionable">Objectionable Content &amp; User Conduct</a></li>
+        <li><a href="#termination">Term &amp; Termination</a></li>
+        <li><a href="#warranty">No Warranty</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#export">Export Compliance</a></li>
+        <li><a href="#govt">U.S. Government End Users</a></li>
+        <li><a href="#apple">Apple App Store</a></li>
+        <li><a href="#google">Google Play</a></li>
+        <li><a href="#law">Governing Law</a></li>
+        <li><a href="#general">General</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="acknowledgement">
+      <h2>1. Acknowledgement</h2>
+      <p>
+        You acknowledge that this EULA is concluded between you and OCare only, and not with Apple Inc.,
+        Google LLC, or any other application-distribution platform (each, a "<strong>Distributor</strong>").
+        OCare, not the Distributor, is solely responsible for the Licensed Application and the content
+        thereof. The Distributor has no obligation whatsoever to furnish any maintenance or support
+        services with respect to the Licensed Application.
+      </p>
+      <p>
+        This EULA does not replace and is in addition to the
+        <a href="/terms-and-conditions">OCare Terms and Conditions</a> and the
+        <a href="/privacy-policy">OCare Privacy Policy</a>, each of which is incorporated by reference.
+        In the event of any conflict between this EULA and the Terms and Conditions with respect to
+        your licence to use the software, this EULA controls.
+      </p>
+    </section>
+
+    <section id="scope">
+      <h2>2. Scope of Licence</h2>
+      <p>
+        Subject to your continuous compliance with this EULA, OCare grants you a personal, limited,
+        revocable, non-exclusive, non-transferable, non-sublicensable licence to install and use the
+        Licensed Application on any device that you own or control, solely for your personal, internal,
+        and educational use in connection with a school or institution that has authorised your account
+        (the "<strong>School</strong>").
+      </p>
+      <p>
+        Where the Licensed Application is obtained through the Apple App Store, the licence is further
+        limited to use on any Apple-branded products that you own or control and as permitted by the
+        Usage Rules set forth in the Apple Media Services Terms and Conditions, except that the
+        Licensed Application may be accessed and used by other accounts associated with you via Family
+        Sharing or volume purchasing where permitted by Apple.
+      </p>
+      <p>
+        Any reproduction, redistribution, public display, public performance, modification, translation,
+        adaptation, or derivative work not expressly authorised by this EULA is prohibited. All rights
+        not expressly granted to you are reserved by OCare and its licensors.
+      </p>
+    </section>
+
+    <section id="restrictions">
+      <h2>3. Restrictions</h2>
+      <p>You shall not, and shall not permit any third party to:</p>
+      <ul>
+        <li>Copy, modify, adapt, translate, or create derivative works of the Licensed Application or any portion thereof.</li>
+        <li>Reverse engineer, disassemble, decompile, decode, or otherwise attempt to derive or gain access to the source code of the Licensed Application or any underlying technology, except to the limited extent applicable law expressly prohibits the foregoing restriction.</li>
+        <li>Rent, lease, lend, sell, sublicense, assign, distribute, publish, transfer, or otherwise make available the Licensed Application or any features or functionality thereof to any third party.</li>
+        <li>Remove, delete, alter, or obscure any trademarks or any copyright, trademark, patent, or other intellectual-property or proprietary-rights notices on or in the Licensed Application.</li>
+        <li>Use the Licensed Application in any manner that infringes, misappropriates, or otherwise violates any intellectual-property right or other right of any person, or that violates any applicable law, regulation, or order.</li>
+        <li>Use the Licensed Application for the benefit of any third party, or to develop, build, or improve any competing product or service.</li>
+        <li>Use any robot, scraper, data-mining tool, or other automated process to access, monitor, or copy any portion of the Licensed Application.</li>
+        <li>Probe, scan, or test the vulnerability of the Licensed Application, breach security or authentication measures, or interfere with the integrity or performance of the Service, except via OCare's coordinated vulnerability-disclosure programme.</li>
+        <li>Use the Licensed Application to develop, train, fine-tune, or evaluate any machine-learning model, foundation model, or generative system.</li>
+      </ul>
+    </section>
+
+    <section id="updates">
+      <h2>4. Updates &amp; Maintenance</h2>
+      <p>
+        OCare may, at its sole discretion and from time to time, make available updates, upgrades,
+        patches, bug fixes, or new releases of the Licensed Application (each, an
+        "<strong>Update</strong>"). Updates may be required to continue using the Licensed Application
+        or to access certain features. You consent to the automatic download and installation of
+        Updates where your device settings permit. All Updates are deemed part of the Licensed
+        Application and are subject to this EULA.
+      </p>
+    </section>
+
+    <section id="data">
+      <h2>5. Consent to Use of Data</h2>
+      <p>
+        You agree that OCare may collect and use technical data and related information — including
+        device identifiers, operating-system version, application version, crash logs, performance
+        telemetry, and information about your use of the Licensed Application — to facilitate the
+        provision of Updates, product support, safety features, and other services. Personal data
+        collected through the Licensed Application is processed in accordance with the
+        <a href="/privacy-policy">OCare Privacy Policy</a>.
+      </p>
+    </section>
+
+    <section id="thirdparty">
+      <h2>6. Third-Party Materials &amp; Services</h2>
+      <p>
+        The Licensed Application may display, include, make available, or rely on content, data, or
+        services from third parties ("<strong>Third-Party Materials</strong>") or contain links to
+        third-party websites or services. You acknowledge and agree that OCare is not responsible for
+        Third-Party Materials, including their accuracy, completeness, timeliness, validity, legality,
+        decency, quality, or any other aspect, and that OCare assumes no liability in respect of
+        Third-Party Materials. Your use of Third-Party Materials may be subject to additional terms
+        between you and the relevant third party.
+      </p>
+    </section>
+
+    <section id="objectionable">
+      <h2>7. Objectionable Content &amp; User Conduct</h2>
+      <p>
+        The Licensed Application enables users to submit, post, transmit, and share user-generated
+        content, including diary entries, posts, chat messages, attachments, and profile information
+        ("<strong>User Content</strong>"). OCare cannot pre-screen every transmission and does not
+        endorse, verify, or assume responsibility for User Content. You alone are responsible for the
+        User Content you create, upload, post, or transmit.
+      </p>
+      <h3>7.1 Prohibited content and behaviour</h3>
+      <p>You shall not create, upload, post, transmit, share, or otherwise make available through the Licensed Application any content or conduct that:</p>
+      <ul>
+        <li>is pornographic, sexually explicit, or otherwise sexually suggestive in a context inappropriate for minors;</li>
+        <li>depicts, promotes, glorifies, or facilitates child sexual exploitation or abuse in any form (which OCare will preserve as required by law and report to the National Center for Missing &amp; Exploited Children (NCMEC), the Royal Malaysia Police, and/or other competent authorities);</li>
+        <li>is unlawful, defamatory, libellous, fraudulent, deceptive, threatening, harassing, intimidating, bullying, abusive, hateful, or that incites violence, self-harm, or discrimination against any person or group;</li>
+        <li>violates the privacy, publicity, intellectual-property, or other rights of any person;</li>
+        <li>contains malware, viruses, worms, trojans, or any code designed to disrupt, damage, or gain unauthorised access to any system or data;</li>
+        <li>impersonates any person or misrepresents your identity, role, affiliation, or School association;</li>
+        <li>solicits sexual, financial, or personal information from minors, or grooms, stalks, or otherwise targets a minor for harm;</li>
+        <li>constitutes spam, phishing, advertising, fundraising, multi-level marketing, or commercial solicitation;</li>
+        <li>is otherwise objectionable as determined by OCare or your School in good faith.</li>
+      </ul>
+      <h3>7.2 Filtering, reporting, and action</h3>
+      <p>OCare implements, and requires you to use, the following safety controls. These controls satisfy the platform requirements of Apple App Store Review Guideline 1.2 and the Google Play User-Generated Content policy:</p>
+      <ul>
+        <li><strong>Filter mechanism.</strong> OCare runs automated content moderation on diary entries, posts, and chat messages to detect objectionable material before or shortly after it is made available to other users. Risk levels (LOW, MEDIUM, HIGH, CRITICAL) are assigned for human triage; HIGH and CRITICAL items are routed for immediate review.</li>
+        <li><strong>In-app reporting.</strong> Every post, chat message, comment, and user profile exposes a <em>Report</em> control. You agree to use it to flag any objectionable User Content or abusive user.</li>
+        <li><strong>Block and mute.</strong> You may block or mute other users from chat and feed surfaces where available, preventing further contact. School administrators may also restrict communications between specific users.</li>
+        <li><strong>24-hour action.</strong> OCare will act on confirmed reports of objectionable User Content within twenty-four (24) hours of confirmation by removing the offending content and, where appropriate, suspending or ejecting the offending user from the Licensed Application. Reports concerning suspected child sexual exploitation are actioned immediately upon discovery.</li>
+        <li><strong>Identity-linked communications.</strong> The Licensed Application does not provide anonymous public posting or random chat with strangers. Communications are limited to users and roles authorised by the participating School and are subject to School oversight and moderation.</li>
+        <li><strong>School and law-enforcement referral.</strong> OCare may report violations to your School and, where appropriate or required, to law-enforcement or child-protection authorities, and may preserve relevant records.</li>
+      </ul>
+      <h3>7.3 Acknowledgement of limits</h3>
+      <p>
+        You acknowledge that OCare cannot guarantee that all objectionable User Content will be
+        prevented from being uploaded or transmitted, and that some objectionable content may appear
+        before it is detected and removed. The controls in Section 7.2 are mitigations, not guarantees.
+        OCare's role is to provide the tools, react promptly to reports, and remove violators — not to
+        endorse, verify, or vouch for User Content. You agree to use the in-app Report control and not
+        to rely on OCare to anticipate every transmission.
+      </p>
+    </section>
+
+    <section id="termination">
+      <h2>8. Term &amp; Termination</h2>
+      <p>
+        This EULA takes effect on your first installation, access, or use of the Licensed Application
+        and remains in effect until terminated. Your rights under this EULA terminate automatically and
+        without notice if you fail to comply with any of its provisions. OCare may also terminate this
+        EULA or suspend your access at any time if (a) you breach this EULA or the Terms and
+        Conditions, (b) we are required to do so by law, (c) your School directs us to, or (d)
+        continued access poses a security, safety, or legal risk.
+      </p>
+      <p>
+        Upon termination, you must cease all use of the Licensed Application and delete all copies from
+        your devices. Sections 3, 5, 6, 7, 9, 10, 11, 15, 16, and any other provisions that by their
+        nature should survive termination, will survive.
+      </p>
+    </section>
+
+    <section id="warranty">
+      <h2>9. No Warranty</h2>
+      <p class="uppercase">
+        The Licensed Application is provided "as is" and "as available", with all faults and without
+        warranty of any kind. To the maximum extent permitted by applicable law, OCare expressly
+        disclaims all warranties and conditions with respect to the Licensed Application, whether
+        express, implied, or statutory, including the implied warranties or conditions of
+        merchantability, satisfactory quality, fitness for a particular purpose, accuracy, quiet
+        enjoyment, and non-infringement of third-party rights.
+      </p>
+      <p>
+        OCare does not warrant against interference with your enjoyment of the Licensed Application,
+        that the functions contained in or services performed or provided by the Licensed Application
+        will meet your requirements, that the operation of the Licensed Application will be
+        uninterrupted or error-free, or that defects in the Licensed Application will be corrected.
+      </p>
+      <p>
+        Should the Licensed Application prove defective, you assume the entire cost of all necessary
+        servicing, repair, or correction. Some jurisdictions do not allow the exclusion of implied
+        warranties or limitations on applicable statutory rights of a consumer, so the above exclusion
+        and limitations may not apply to you.
+      </p>
+    </section>
+
+    <section id="liability">
+      <h2>10. Limitation of Liability</h2>
+      <p class="uppercase">
+        To the extent not prohibited by law, in no event shall OCare be liable for personal injury or
+        any incidental, special, indirect, or consequential damages whatsoever, including, without
+        limitation, damages for loss of profits, loss of data, business interruption, or any other
+        commercial damages or losses, arising out of or related to your use of or inability to use the
+        Licensed Application, however caused, regardless of the theory of liability (contract, tort, or
+        otherwise) and even if OCare has been advised of the possibility of such damages.
+      </p>
+      <p>
+        In no event shall OCare's aggregate liability to you for all damages exceed the greater of the
+        amount paid by your School for the Licensed Application during the twelve (12) months
+        preceding the claim or one hundred Malaysian Ringgit (RM 100). The foregoing limitations apply
+        even if the remedy fails of its essential purpose. Nothing in this EULA excludes or limits
+        liability that cannot be excluded or limited under applicable law.
+      </p>
+    </section>
+
+    <section id="export">
+      <h2>11. Export Compliance</h2>
+      <p>
+        You may not use or otherwise export or re-export the Licensed Application except as authorised
+        by Malaysian law and the laws of the jurisdiction in which the Licensed Application was
+        obtained. In particular, but without limitation, the Licensed Application may not be exported
+        or re-exported (a) into any country subject to a U.S. Government embargo, or (b) to anyone on
+        the U.S. Treasury Department's Specially Designated Nationals List or the U.S. Department of
+        Commerce Denied Persons List or Entity List, or to any restricted-party list maintained by the
+        European Union, the United Nations, or the Government of Malaysia. By using the Licensed
+        Application, you represent and warrant that you are not located in any such country or on any
+        such list.
+      </p>
+    </section>
+
+    <section id="govt">
+      <h2>12. U.S. Government End Users</h2>
+      <p>
+        The Licensed Application and related documentation are "Commercial Items", as that term is
+        defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial
+        Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R.
+        §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through
+        227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software
+        Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and
+        (b) with only those rights as are granted to all other end users pursuant to the terms and
+        conditions herein.
+      </p>
+    </section>
+
+    <section id="apple">
+      <h2>13. Apple App Store</h2>
+      <p>
+        The following additional terms apply if you obtained the Licensed Application from the Apple
+        App Store. You acknowledge and agree that:
+      </p>
+      <ul>
+        <li>This EULA is concluded between you and OCare only, and not with Apple Inc. ("<strong>Apple</strong>"). OCare, not Apple, is solely responsible for the Licensed Application and its content.</li>
+        <li>The licence granted to you for the Licensed Application is limited to a non-transferable licence to use the Licensed Application on any Apple-branded products that you own or control and as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions.</li>
+        <li>Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the Licensed Application.</li>
+        <li>In the event of any failure of the Licensed Application to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the Licensed Application to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the Licensed Application, and any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be OCare's sole responsibility.</li>
+        <li>OCare, not Apple, is responsible for addressing any claims by you or any third party relating to the Licensed Application or your possession and/or use of the Licensed Application, including but not limited to (i) product-liability claims; (ii) any claim that the Licensed Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer-protection, privacy, or similar legislation, including in connection with the Licensed Application's use of the HealthKit and HomeKit frameworks (if applicable).</li>
+        <li>In the event of any third-party claim that the Licensed Application or your possession and use of the Licensed Application infringes that third party's intellectual-property rights, OCare, not Apple, will be solely responsible for the investigation, defence, settlement, and discharge of any such intellectual-property infringement claim.</li>
+        <li>You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</li>
+        <li>You must comply with applicable third-party terms of agreement when using the Licensed Application (e.g., your wireless data-service agreement).</li>
+        <li>Apple and Apple's subsidiaries are third-party beneficiaries of this EULA, and upon your acceptance of this EULA, Apple will have the right (and will be deemed to have accepted the right) to enforce this EULA against you as a third-party beneficiary thereof.</li>
+      </ul>
+    </section>
+
+    <section id="google">
+      <h2>14. Google Play</h2>
+      <p>
+        If you obtained the Licensed Application from Google Play, your use is also subject to the
+        Google Play Terms of Service. To the extent this EULA conflicts with the Google Play Terms with
+        respect to your use of the Licensed Application obtained from Google Play, the Google Play
+        Terms control solely with respect to that use. Google LLC is not a party to this EULA and has
+        no obligation to provide maintenance or support for the Licensed Application.
+      </p>
+    </section>
+
+    <section id="law">
+      <h2>15. Governing Law</h2>
+      <p>
+        This EULA is governed by the laws of Malaysia, without regard to its conflict-of-laws rules,
+        except that the United Nations Convention on Contracts for the International Sale of Goods is
+        expressly excluded. The courts of Kuala Lumpur, Malaysia have exclusive jurisdiction over any
+        dispute arising out of or in connection with this EULA, except that either party may seek
+        injunctive relief in any court of competent jurisdiction. Mandatory consumer-protection rights
+        in your jurisdiction are not affected by this section.
+      </p>
+    </section>
+
+    <section id="general">
+      <h2>16. General</h2>
+      <ul>
+        <li><strong>Entire agreement.</strong> This EULA, together with the OCare Terms and Conditions and the OCare Privacy Policy, constitutes the entire agreement between you and OCare regarding the Licensed Application and supersedes all prior or contemporaneous understandings.</li>
+        <li><strong>Severability.</strong> If any provision of this EULA is held to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this EULA otherwise remains in full force and effect.</li>
+        <li><strong>No waiver.</strong> Failure by OCare to enforce any right or provision of this EULA will not constitute a waiver of future enforcement of that right or provision.</li>
+        <li><strong>Assignment.</strong> You may not assign or transfer this EULA, by operation of law or otherwise, without OCare's prior written consent. OCare may assign this EULA without consent in connection with a merger, acquisition, corporate reorganisation, or sale of all or substantially all of its assets.</li>
+        <li><strong>Changes.</strong> OCare may modify this EULA from time to time. Material changes will be notified in the app and/or by email at least fourteen (14) days before they take effect. Your continued use of the Licensed Application after the effective date constitutes acceptance of the modified EULA.</li>
+        <li><strong>Force majeure.</strong> Neither party is liable for any delay or failure to perform caused by events beyond its reasonable control.</li>
+        <li><strong>Language.</strong> The English version of this EULA is the controlling version. Translations are provided for convenience only.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>17. Contact</h2>
+      <p>
+        <strong>OC Global Tech Sdn. Bhd.</strong><br />
+        Kuala Lumpur, Malaysia<br />
+        Legal: <a href="mailto:legal@ocare.io">legal@ocare.io</a><br />
+        Support: <a href="mailto:support@ocare.io">support@ocare.io</a><br />
+        Trust &amp; Safety / abuse reports: <a href="mailto:safety@ocare.io">safety@ocare.io</a><br />
+        Privacy: <a href="mailto:privacy@ocare.io">privacy@ocare.io</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <span>© 2026 OCare Inc. All rights reserved.</span>
+      <div>
+        <a href="/">Home</a>
+        <a href="/privacy-policy">Privacy</a>
+        <a href="/terms-and-conditions">Terms</a>
+        <a href="/eula">EULA</a>
+        <a href="mailto:hello@ocare.io">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -3,3 +3,7 @@
 /privacy-policy          /privacy-policy.html         200
 /terms                   /terms-and-conditions        301
 /terms-and-conditions    /terms-and-conditions.html   200
+/license                 /eula                        301
+/end-user-licence        /eula                        301
+/end-user-license        /eula                        301
+/eula                    /eula.html                   200
