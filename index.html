@@ -733,6 +733,9 @@
     box-shadow: 0 5px 0 var(--orange-d), 0 12px 22px -10px rgba(255,138,0,0.7);
   }
 
+  .showcase [data-panel] {
+    transition: opacity .28s ease, transform .28s var(--spring);
+  }
   .mobile-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1569,11 +1572,11 @@
     </div>
 
     <div style="text-align:center"><div class="showcase-tabs" role="tablist" aria-label="Product views">
-      <button class="showcase-tab active" type="button" role="tab" aria-selected="true">Mobile app</button>
-      <button class="showcase-tab" type="button" role="tab" aria-selected="false">Admin dashboard</button>
+      <button class="showcase-tab active" type="button" role="tab" aria-selected="true" data-target="mobile">Mobile app</button>
+      <button class="showcase-tab" type="button" role="tab" aria-selected="false" data-target="admin">Admin dashboard</button>
     </div></div>
 
-    <div class="mobile-row" aria-hidden="true">
+    <div class="mobile-row" data-panel="mobile" aria-hidden="true">
       <div class="mini-phone">
         <div class="mp-frame">
           <div class="mp-screen">
@@ -1611,7 +1614,7 @@
       </div>
     </div>
 
-    <div class="dashboard-showcase" aria-hidden="true">
+    <div class="dashboard-showcase" data-panel="admin" aria-hidden="true" style="display:none">
       <div class="dash-window">
           <div style="height:38px;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid var(--line-2);background:var(--bg-2)">
             <div style="display:flex;gap:6px">
@@ -1942,11 +1945,54 @@
     }
 
     var tabs = document.querySelectorAll('.showcase-tab');
+    var panels = document.querySelectorAll('.showcase [data-panel]');
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function showPanel(target){
+      var next = null, current = [];
+      panels.forEach(function(p){
+        if (p.getAttribute('data-panel') === target) next = p;
+        else if (getComputedStyle(p).display !== 'none') current.push(p);
+      });
+      if (!next || getComputedStyle(next).display !== 'none') return;
+      var reveal = function(){
+        next.style.display = '';
+        if (reduceMotion) return;
+        next.style.opacity = '0';
+        next.style.transform = 'translateY(10px)';
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){
+          next.style.opacity = '1';
+          next.style.transform = 'none';
+        }); });
+      };
+      if (reduceMotion || !current.length){
+        current.forEach(function(p){ p.style.display = 'none'; });
+        reveal();
+        return;
+      }
+      var pending = current.length;
+      current.forEach(function(p){
+        var fired = false;
+        var done = function(){
+          if (fired) return;
+          fired = true;
+          p.removeEventListener('transitionend', done);
+          p.style.display = 'none';
+          p.style.opacity = '';
+          p.style.transform = '';
+          if (--pending === 0) reveal();
+        };
+        p.addEventListener('transitionend', done);
+        setTimeout(done, 340);
+        p.style.opacity = '0';
+        p.style.transform = 'translateY(10px)';
+      });
+    }
     tabs.forEach(function(t){
       t.addEventListener('click', function(){
         tabs.forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
         t.classList.add('active');
         t.setAttribute('aria-selected','true');
+        showPanel(t.getAttribute('data-target'));
       });
     });
 
