@@ -7,90 +7,128 @@
 <meta name="color-scheme" content="light" />
 <title>OCare — School Communication & Well-Being Platform</title>
 <meta name="description" content="OCare unites parents, teachers, counsellors and students under one secure, emotionally intelligent platform for school communication and student well-being." />
-<link rel="canonical" href="https://ocare.io/" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='a' cx='30%25' cy='20%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='%23FFD658'/%3E%3Cstop offset='55%25' stop-color='%23FF8800'/%3E%3Cstop offset='100%25' stop-color='%23743C00'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23a)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter Tight,sans-serif' font-weight='800' font-size='18' fill='white'%3EO%3C/text%3E%3C/svg%3E" />
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='a' cx='30%25' cy='20%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='%23FFD658'/%3E%3Cstop offset='55%25' stop-color='%23FF8800'/%3E%3Cstop offset='100%25' stop-color='%23743C00'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23a)'/%3E%3C/svg%3E" />
+<link rel="canonical" href="https://ocare.ocgt.app/" />
+<link rel="icon" type="image/png" href="assets/ocare.png" />
+<link rel="apple-touch-icon" href="assets/ocare.png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="OCare — School Communication & Well-Being Platform" />
 <meta property="og:description" content="One secure space for every voice in a student's life — messaging, mood analytics, SOS and safeguarding for K-12." />
-<meta property="og:url" content="https://ocare.io/" />
+<meta property="og:url" content="https://ocare.ocgt.app/" />
 <meta property="og:site_name" content="OCare" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="OCare — School Communication & Well-Being Platform" />
 <meta name="twitter:description" content="One secure space for every voice in a student's life." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap">
 <style>
   :root {
-    /* OCare palette (6 colors only)
-       deep   #743C00  primary dark / text
-       orange #FF8800  primary accent
-       peach  #EF9A4A  secondary accent
-       gold   #FFD658  highlight / glow
-       cream  #FDE3A6  soft tint / surfaces
-       paper  #F8F8F8  base background */
-    --deep-900: #3d1f00;
-    --deep-800: #5a2e00;
-    --deep-700: #743C00;
-    --deep-600: #8f5016;
-    --teal-500: #FF8800;
-    --teal-400: #EF9A4A;
-    --cyan-300: #FFD658;
-    --cyan-200: #FDE3A6;
-    --mint-100: #FDE3A6;
+    /* OCare — Soft Toy / Rounded: warm cream base + candy pastels, orange leads.
+       Existing var NAMES kept (inline mockups reference them); only VALUES changed. */
+    --deep-900: #3a2417;
+    --deep-800: #5a3a22;
+    --deep-700: #8a4e14;   /* warm brown deep accent */
+    --deep-600: #a9712b;
+    --teal-500: #ff8a00;   /* primary orange — name kept for inline refs */
+    --teal-400: #ffb04d;
+    --cyan-300: #ffc93c;   /* sunshine gold */
+    --cyan-200: #ffe7c2;
+    --mint-100: #ffe7c2;
 
-    --ink-900: #2a1600;
-    --ink-700: #5a3a1a;
-    --ink-500: #8f6a42;
-    --ink-400: #b79267;
-    --ink-300: #d9c2a1;
-    --line:    #ecd9b9;
-    --line-2:  #f4e6cc;
-    --bg:      #F8F8F8;
-    --bg-2:    #FDE3A6;
+    /* candy accent set (new) */
+    --orange:   #ff8a00;
+    --orange-d: #e36f00;   /* button extrusion */
+    --coral:    #ff7e8a;
+    --coral-d:  #e85f6d;
+    --mint:     #54d6a6;
+    --mint-d:   #2fb985;
+    --sky:      #6fb1ff;
+    --sky-d:    #4f93e6;
+    --grape:    #b79bff;
+    --sun:      #ffc93c;
+
+    --ink-900: #46301e;
+    --ink-700: #7a5c45;
+    --ink-500: #9c7c62;
+    --ink-400: #bba088;
+    --ink-300: #dec9ae;
+    --line:    #f2dec4;
+    --line-2:  #fbefdc;
+    --bg:      #fff6ea;
+    --bg-2:    #ffe3be;
     --white:   #ffffff;
 
-    --radius-sm: 10px;
-    --radius:    16px;
-    --radius-lg: 22px;
-    --radius-xl: 32px;
+    --radius-sm: 16px;
+    --radius:    24px;
+    --radius-lg: 32px;
+    --radius-xl: 46px;
 
-    --shadow-sm: 0 1px 2px rgba(116,60,0,0.06), 0 1px 1px rgba(116,60,0,0.04);
-    --shadow:    0 10px 30px -12px rgba(116,60,0,0.22), 0 2px 6px rgba(116,60,0,0.05);
-    --shadow-lg: 0 40px 80px -24px rgba(116,60,0,0.3), 0 10px 30px -10px rgba(116,60,0,0.14);
-    --shadow-glow: 0 30px 90px -20px rgba(255, 136, 0, 0.4);
+    --shadow-sm: 0 4px 14px -6px rgba(120,70,20,0.18);
+    --shadow:    0 16px 34px -14px rgba(120,70,20,0.22), 0 4px 12px -8px rgba(120,70,20,0.14);
+    --shadow-lg: 0 38px 72px -24px rgba(120,70,20,0.3), 0 12px 30px -14px rgba(120,70,20,0.16);
+    --shadow-glow: 0 30px 80px -22px rgba(255,138,0,0.45);
 
-    --font-display: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+    --spring: cubic-bezier(.34,1.56,.64,1);
+
+    --font-display: 'Baloo 2', ui-rounded, 'Segoe UI Rounded', system-ui, sans-serif;
+    --font-body:    'Nunito', ui-rounded, system-ui, -apple-system, sans-serif;
+    --font-mono:    'Nunito', ui-monospace, monospace;
 
     --container: 1200px;
   }
 
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   html, body { margin: 0; padding: 0; }
   body {
     font-family: var(--font-body);
+    font-weight: 500;
     color: var(--ink-900);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    line-height: 1.5;
-    font-size: 16px;
+    line-height: 1.55;
+    font-size: 16.5px;
     overflow-x: hidden;
+    position: relative;
+  }
+  /* playful pastel atmosphere — soft candy blobs behind everything */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(38% 30% at 8% 4%, rgba(255,201,60,0.55), transparent 60%),
+      radial-gradient(34% 28% at 93% 3%, rgba(255,126,138,0.34), transparent 60%),
+      radial-gradient(40% 36% at 97% 72%, rgba(111,177,255,0.28), transparent 60%),
+      radial-gradient(42% 40% at 3% 95%, rgba(84,214,166,0.32), transparent 62%),
+      var(--bg);
+    pointer-events: none;
+  }
+  /* subtle paper grain so flats never look flat */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
   }
   img { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
   button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
-  :focus-visible { outline: 2px solid var(--teal-500); outline-offset: 3px; border-radius: 6px; }
+  ::selection { background: var(--sun); color: var(--ink-900); }
+
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 12px; }
 
   .skip-link {
     position: absolute; left: -9999px; top: 8px;
-    background: var(--deep-900); color: white;
-    padding: 8px 14px; border-radius: 8px;
-    font-size: 13px; font-weight: 600; z-index: 200;
+    background: var(--ink-900); color: white;
+    padding: 10px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 800; z-index: 200;
   }
   .skip-link:focus { left: 12px; }
 
@@ -100,42 +138,52 @@
     padding: 0 32px;
   }
 
-  /* ---------- Nav ---------- */
+  /* ---------- Nav (floating rounded pill) ---------- */
   .nav-wrap {
     position: sticky;
-    top: 0;
+    top: 14px;
     z-index: 50;
-    backdrop-filter: saturate(180%) blur(14px);
-    -webkit-backdrop-filter: saturate(180%) blur(14px);
-    background: rgba(248,248,248,0.78);
-    border-bottom: 1px solid transparent;
-    transition: border-color .2s ease, background .2s ease;
-  }
-  .nav-wrap.scrolled {
-    border-color: var(--line);
-    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    padding: 0 16px;
   }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 64px;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 12px 0 18px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px -14px rgba(120,70,20,0.28), inset 0 0 0 1.5px rgba(255,255,255,0.7);
+    transition: box-shadow .3s var(--spring), transform .3s var(--spring);
+  }
+  .nav-wrap.scrolled nav {
+    box-shadow: 0 16px 40px -16px rgba(120,70,20,0.4), inset 0 0 0 1.5px var(--line);
+    transform: scale(0.99);
   }
   .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 19px;
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    color: var(--ink-900);
   }
   .brand-mark {
-    width: 30px; height: 30px;
+    width: 36px; height: 36px;
     display: grid;
     place-items: center;
-    background: transparent;
+    background: var(--bg-2);
+    border-radius: 13px;
+    padding: 4px;
+    transition: transform .45s var(--spring);
   }
+  .brand:hover .brand-mark { transform: rotate(-9deg) scale(1.08); }
   .brand-mark img {
     width: 100%;
     height: 100%;
@@ -144,15 +192,21 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 4px;
     font-size: 14.5px;
+    font-weight: 700;
     color: var(--ink-700);
   }
-  .nav-links a:hover { color: var(--ink-900); }
+  .nav-links a {
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: background .2s ease, color .2s ease, transform .2s var(--spring);
+  }
+  .nav-links a:hover { color: var(--ink-900); background: var(--bg-2); transform: translateY(-1px); }
   .nav-cta {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   /* ---------- Buttons ---------- */
@@ -160,55 +214,108 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    height: 44px;
-    padding: 0 20px;
+    height: 50px;
+    padding: 0 24px;
     border-radius: 999px;
-    font-weight: 550;
-    font-size: 14.5px;
-    transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15.5px;
+    transition: transform .18s var(--spring), box-shadow .18s var(--spring), background .2s ease;
     white-space: nowrap;
   }
-  .btn:active { transform: translateY(1px); }
+  .btn svg { transition: transform .25s var(--spring); }
+  .btn:hover svg { transform: translateX(3px) rotate(2deg); }
+  /* candy buttons with a hard "extruded" bottom — toy press feel */
   .btn-primary {
-    background: linear-gradient(180deg, #FF8800, #EF9A4A);
-    color: #3d1f00;
-    box-shadow: 0 10px 24px -10px rgba(255,136,0,0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+    background: linear-gradient(180deg, #ffa12a, var(--orange));
+    color: #fff;
+    box-shadow: 0 6px 0 var(--orange-d), 0 16px 26px -12px rgba(255,138,0,0.7);
   }
-  .btn-primary:hover { box-shadow: 0 14px 30px -10px rgba(255,136,0,0.7), inset 0 1px 0 rgba(255,255,255,0.4); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--orange-d), 0 22px 36px -12px rgba(255,138,0,0.8); }
+  .btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--orange-d), 0 8px 16px -10px rgba(255,138,0,0.7); }
   .btn-ghost {
-    background: transparent;
+    background: rgba(255,255,255,0.7);
     color: var(--ink-900);
-    box-shadow: inset 0 0 0 1px var(--line);
+    box-shadow: inset 0 0 0 2px var(--line);
   }
-  .btn-ghost:hover { background: var(--white); box-shadow: inset 0 0 0 1px var(--ink-300); }
+  .btn-ghost:hover { background: #fff; box-shadow: inset 0 0 0 2px var(--orange); transform: translateY(-2px); }
+  .btn-ghost:active { transform: translateY(1px); }
   .btn-light {
-    background: #FFD658;
-    color: #3d1f00;
-    box-shadow: 0 8px 24px -10px rgba(116,60,0,0.3), inset 0 0 0 1px rgba(116,60,0,0.08);
+    background: var(--sun);
+    color: var(--ink-900);
+    box-shadow: 0 6px 0 #e0a91f, 0 16px 26px -12px rgba(255,201,60,0.7);
   }
-  .btn-light:hover { transform: translateY(-1px); }
-  .btn-sm { height: 38px; padding: 0 16px; font-size: 13.5px; }
+  .btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 0 #e0a91f, 0 22px 36px -12px rgba(255,201,60,0.85); }
+  .btn-light:active { transform: translateY(4px); box-shadow: 0 2px 0 #e0a91f; }
+  .btn-sm { height: 42px; padding: 0 18px; font-size: 14px; }
+
+  /* App-store chooser — pure-CSS <details> popover */
+  .store-menu { position: relative; display: inline-block; }
+  .store-menu > summary { list-style: none; cursor: pointer; }
+  .store-menu > summary::-webkit-details-marker { display: none; }
+  .store-menu > summary::marker { content: ""; }
+  .store-menu > summary svg { transition: transform .25s var(--spring); }
+  .store-menu[open] > summary svg { transform: rotate(180deg); }
+  .store-pop {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    z-index: 60;
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    min-width: 232px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg), inset 0 0 0 2px var(--line-2);
+    animation: popIn .26s var(--spring);
+  }
+  .store-pop::before {
+    content: "";
+    position: absolute;
+    top: -7px; left: 26px;
+    width: 13px; height: 13px;
+    background: #fff;
+    border-left: 2px solid var(--line-2);
+    border-top: 2px solid var(--line-2);
+    transform: rotate(45deg);
+  }
+  .nav-cta .store-pop { left: auto; right: 0; }
+  .nav-cta .store-pop::before { left: auto; right: 26px; }
+  .hero-cta[style*="center"] .store-pop { left: 50%; transform: translateX(-50%); animation: popInC .26s var(--spring); }
+  .hero-cta[style*="center"] .store-pop::before { left: 50%; margin-left: -6px; }
+  .store-link {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--ink-900);
+    color: #fff;
+    transition: transform .18s var(--spring), background .2s ease;
+  }
+  .store-link:hover { transform: translateY(-2px) scale(1.02); background: #2a1b10; }
+  .store-link svg { flex-shrink: 0; }
+  .store-link span { display: flex; flex-direction: column; line-height: 1.08; font-family: var(--font-display); }
+  .store-link small { font-size: 10px; font-weight: 600; opacity: 0.82; }
+  .store-link b { font-size: 16px; font-weight: 700; }
+  @keyframes popIn  { from { opacity: 0; transform: translateY(-8px) scale(.96); } to { opacity: 1; transform: none; } }
+  @keyframes popInC { from { opacity: 0; transform: translateX(-50%) translateY(-8px) scale(.96); } to { opacity: 1; transform: translateX(-50%); } }
 
   /* ---------- Hero ---------- */
   .hero {
     position: relative;
-    padding: 72px 0 120px;
-    background:
-      radial-gradient(60% 80% at 80% 0%, rgba(255, 214, 88, 0.55), transparent 60%),
-      radial-gradient(50% 70% at 10% 10%, rgba(253, 227, 166, 0.8), transparent 60%),
-      linear-gradient(180deg, #F8F8F8 0%, #FDE3A6 100%);
+    padding: 96px 0 130px;
     overflow: hidden;
   }
+  /* big soft squircle blob instead of a techy grid */
   .hero::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(to right, rgba(116,60,0,0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(116,60,0,0.06) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(70% 80% at 50% 30%, #000 40%, transparent 80%);
-    -webkit-mask-image: radial-gradient(70% 80% at 50% 30%, #000 40%, transparent 80%);
+    top: -130px; right: -70px;
+    width: 460px; height: 460px;
+    background: radial-gradient(circle at 35% 30%, #ffd877, var(--orange) 72%);
+    border-radius: 47% 53% 44% 56% / 55% 46% 54% 45%;
+    opacity: 0.5;
+    animation: blobFloat 16s ease-in-out infinite;
     pointer-events: none;
   }
   .hero-inner {
@@ -218,54 +325,59 @@
     gap: 60px;
     align-items: center;
   }
+  /* sticker-style eyebrow — a little rotated tag */
   .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 6px 14px 6px 6px;
+    gap: 9px;
+    padding: 8px 16px 8px 8px;
     border-radius: 999px;
-    background: color-mix(in oklab, white 70%, transparent);
-    backdrop-filter: blur(8px);
-    box-shadow: inset 0 0 0 1px var(--line), 0 1px 1px rgba(116,60,0,0.04);
-    font-size: 13px;
+    background: #fff;
+    box-shadow: 0 8px 20px -10px rgba(120,70,20,0.4), inset 0 0 0 2px var(--line);
+    font-size: 13.5px;
+    font-weight: 800;
     color: var(--ink-700);
-    font-weight: 500;
+    transform: rotate(-2deg);
+    transition: transform .35s var(--spring);
   }
+  .eyebrow:hover { transform: rotate(0deg) scale(1.03); }
   .eyebrow .dot {
-    width: 22px; height: 22px; border-radius: 999px;
-    background: linear-gradient(140deg, var(--teal-500), var(--deep-700));
+    width: 24px; height: 24px; border-radius: 999px;
+    background: linear-gradient(140deg, var(--sun), var(--orange));
     display: grid; place-items: center;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.14);
   }
-  .eyebrow b { color: var(--ink-900); font-weight: 600; }
+  .eyebrow b { color: var(--ink-900); font-weight: 800; }
 
   h1.hero-title {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(40px, 5.2vw, 68px);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    margin: 18px 0 20px;
+    font-weight: 800;
+    font-size: clamp(44px, 5.6vw, 76px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    margin: 22px 0 22px;
     color: var(--ink-900);
     text-wrap: balance;
   }
   .hero-title .grad {
-    background: linear-gradient(100deg, #743C00 0%, #FF8800 55%, #EF9A4A 100%);
+    background: linear-gradient(100deg, var(--coral) 0%, var(--orange) 45%, var(--sun) 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .hero-sub {
-    font-size: 19px;
+    font-size: 19.5px;
+    font-weight: 600;
     color: var(--ink-700);
     max-width: 520px;
     line-height: 1.55;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     text-wrap: pretty;
   }
   .hero-cta {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     flex-wrap: wrap;
     margin-bottom: 28px;
   }
@@ -274,14 +386,15 @@
     align-items: center;
     gap: 22px;
     color: var(--ink-500);
-    font-size: 13px;
+    font-size: 13.5px;
+    font-weight: 700;
     flex-wrap: wrap;
   }
-  .hero-meta .sep { width: 1px; height: 14px; background: var(--line); }
+  .hero-meta .sep { width: 6px; height: 6px; border-radius: 999px; background: var(--coral); }
   .check {
     display: inline-flex; gap: 6px; align-items: center;
   }
-  .check svg { color: var(--teal-500); }
+  .check svg { color: var(--mint-d); }
 
   /* Hero visual — composed phone + dashboard */
   .hero-visual {
@@ -292,9 +405,10 @@
     position: absolute;
     inset: -40px;
     background:
-      radial-gradient(40% 50% at 70% 40%, rgba(255, 214, 88, 0.65), transparent 60%),
-      radial-gradient(40% 50% at 20% 70%, rgba(255, 136, 0, 0.35), transparent 60%);
-    filter: blur(40px);
+      radial-gradient(40% 50% at 70% 38%, rgba(255,201,60,0.7), transparent 60%),
+      radial-gradient(42% 52% at 22% 72%, rgba(255,126,138,0.45), transparent 62%),
+      radial-gradient(36% 46% at 86% 82%, rgba(111,177,255,0.4), transparent 60%);
+    filter: blur(46px);
     pointer-events: none;
   }
 
@@ -303,44 +417,49 @@
     top: 20px; left: 0; right: 0;
     height: 520px;
     background: white;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    border: 1px solid var(--line-2);
-    transform: perspective(1400px) rotateY(-6deg) rotateX(2deg);
+    border: 3px solid #fff;
+    transform: rotate(-3deg);
     transform-origin: center;
-    animation: float 9s ease-in-out infinite;
+    animation: bob 9s ease-in-out infinite;
   }
-  @keyframes float {
-    0%,100% { transform: perspective(1400px) rotateY(-6deg) rotateX(2deg) translateY(0); }
-    50%     { transform: perspective(1400px) rotateY(-6deg) rotateX(2deg) translateY(-8px); }
+  @keyframes bob {
+    0%,100% { transform: rotate(-3deg) translateY(0); }
+    50%     { transform: rotate(-3deg) translateY(-10px); }
   }
 
+  /* toy phone — chunky sticker outline, gentle wobble */
   .phone {
     position: absolute;
-    right: -30px;
+    right: -24px;
     bottom: -20px;
     width: 270px;
     height: 560px;
-    border-radius: 42px;
-    background: linear-gradient(160deg, #3d1f00, #743C00);
+    border-radius: 50px;
+    background: linear-gradient(160deg, #2a2a2a, #000000);
     padding: 10px;
     box-shadow:
-      0 40px 80px -20px rgba(61,31,0,0.5),
-      0 20px 40px -10px rgba(61,31,0,0.3),
-      inset 0 0 0 1px rgba(255,255,255,0.08);
-    transform: perspective(1400px) rotateY(8deg) rotateX(-2deg);
+      0 40px 70px -22px rgba(120,70,20,0.55),
+      0 0 0 6px #fff,
+      0 0 0 10px var(--bg-2);
+    transform: rotate(4deg);
     animation: float2 10s ease-in-out infinite;
     z-index: 2;
   }
   @keyframes float2 {
-    0%,100% { transform: perspective(1400px) rotateY(8deg) rotateX(-2deg) translateY(0); }
-    50%     { transform: perspective(1400px) rotateY(8deg) rotateX(-2deg) translateY(-14px); }
+    0%,100% { transform: rotate(4deg) translateY(0); }
+    50%     { transform: rotate(4deg) translateY(-16px); }
+  }
+  @keyframes blobFloat {
+    0%,100% { transform: translate(0,0) rotate(0deg); border-radius: 47% 53% 44% 56% / 55% 46% 54% 45%; }
+    50%     { transform: translate(-14px,18px) rotate(8deg); border-radius: 53% 47% 56% 44% / 46% 55% 45% 54%; }
   }
   .phone-screen {
     width: 100%; height: 100%;
-    border-radius: 34px;
-    background: linear-gradient(180deg, #F8F8F8, #FDE3A6);
+    border-radius: 41px;
+    background: linear-gradient(180deg, var(--bg), var(--bg-2));
     overflow: hidden;
     position: relative;
   }
@@ -349,35 +468,41 @@
     top: 8px; left: 50%;
     transform: translateX(-50%);
     width: 86px; height: 22px;
-    background: #3d1f00;
+    background: #000;
     border-radius: 999px;
     z-index: 3;
   }
 
   /* ---------- Section ---------- */
-  section { padding: 120px 0; position: relative; }
+  section { padding: 110px 0; position: relative; }
   .sec-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.14em;
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #FF8800;
-    font-weight: 600;
-    margin-bottom: 14px;
+    color: var(--orange);
+    font-weight: 800;
+    margin-bottom: 16px;
+    padding: 5px 14px;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 2px var(--line);
   }
   .sec-title {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(32px, 3.8vw, 48px);
-    letter-spacing: -0.03em;
-    line-height: 1.08;
+    font-weight: 800;
+    font-size: clamp(33px, 4vw, 52px);
+    letter-spacing: -0.01em;
+    line-height: 1.06;
     color: var(--ink-900);
-    max-width: 720px;
+    max-width: 740px;
     text-wrap: balance;
     margin: 0 0 18px;
   }
   .sec-sub {
     font-size: 18px;
+    font-weight: 600;
     color: var(--ink-500);
     max-width: 600px;
     margin: 0;
@@ -398,27 +523,30 @@
   .sec-head-center .sec-title,
   .sec-head-center .sec-sub { margin-left: auto; margin-right: auto; }
 
-  /* ---------- Logo bar ---------- */
+  /* ---------- Logo bar (soft rounded shelf) ---------- */
   .logo-strip {
-    padding: 56px 0 32px;
-    background: var(--bg);
-    border-top: 1px solid var(--line-2);
-    border-bottom: 1px solid var(--line-2);
+    padding: 40px 0;
+    background: transparent;
+    border: none;
   }
   .logo-strip-inner {
     display: grid;
     grid-template-columns: auto repeat(6, 1fr);
-    gap: 32px;
+    gap: 24px;
     align-items: center;
+    background: rgba(255,255,255,0.6);
+    border-radius: var(--radius-lg);
+    padding: 22px 28px;
+    box-shadow: inset 0 0 0 2px var(--line-2);
   }
   .logo-strip-label {
     font-size: 12.5px;
     color: var(--ink-500);
-    font-weight: 500;
+    font-weight: 700;
     max-width: 160px;
     line-height: 1.4;
   }
-  .logo-strip-label b { color: var(--ink-900); font-weight: 600; }
+  .logo-strip-label b { color: var(--ink-900); font-weight: 800; }
   .logo-placeholder {
     height: 28px;
     display: flex;
@@ -426,54 +554,61 @@
     justify-content: center;
     color: var(--ink-400);
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-weight: 700;
     font-size: 15px;
-    opacity: 0.75;
+    opacity: 0.85;
     gap: 7px;
+    transition: transform .3s var(--spring), color .2s ease;
   }
-  .logo-placeholder svg { flex-shrink: 0; color: var(--ink-400); }
+  .logo-placeholder:hover { transform: translateY(-2px) rotate(-2deg); color: var(--orange); opacity: 1; }
+  .logo-placeholder svg { flex-shrink: 0; color: currentColor; }
 
   /* ---------- Problem grid ---------- */
-  .problems {
-    background: linear-gradient(180deg, var(--bg), var(--bg-2));
-  }
+  .problems { background: transparent; }
   .prob-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 22px;
   }
   .prob-card {
-    background: white;
-    border-radius: var(--radius);
-    padding: 26px;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 28px;
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--line-2);
-    transition: transform .25s ease, box-shadow .25s ease;
+    border: 2px solid var(--line-2);
+    transition: transform .3s var(--spring), box-shadow .3s var(--spring), border-color .3s ease;
   }
   .prob-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px) rotate(-1deg);
     box-shadow: var(--shadow);
+    border-color: var(--orange);
   }
+  /* each card gets its own candy icon tint */
   .prob-icon {
-    width: 44px; height: 44px;
-    border-radius: 12px;
-    background: linear-gradient(140deg, #FDE3A6, #FFD658);
+    width: 54px; height: 54px;
+    border-radius: 17px;
+    background: linear-gradient(150deg, var(--sun), var(--orange));
     display: grid; place-items: center;
-    color: #743C00;
+    color: #fff;
     margin-bottom: 22px;
-    box-shadow: inset 0 0 0 1px rgba(239,154,74,0.4);
+    box-shadow: 0 8px 16px -8px rgba(255,138,0,0.7), inset 0 -3px 0 rgba(0,0,0,0.1);
+    transition: transform .4s var(--spring);
   }
+  .prob-card:hover .prob-icon { transform: rotate(-10deg) scale(1.08); }
+  .prob-card:nth-child(2) .prob-icon { background: linear-gradient(150deg, #ffb0b8, var(--coral)); box-shadow: 0 8px 16px -8px rgba(255,126,138,0.7), inset 0 -3px 0 rgba(0,0,0,0.1); }
+  .prob-card:nth-child(3) .prob-icon { background: linear-gradient(150deg, #9be0ff, var(--sky)); box-shadow: 0 8px 16px -8px rgba(111,177,255,0.7), inset 0 -3px 0 rgba(0,0,0,0.1); }
+  .prob-card:nth-child(4) .prob-icon { background: linear-gradient(150deg, #8ee9c6, var(--mint)); box-shadow: 0 8px 16px -8px rgba(84,214,166,0.7), inset 0 -3px 0 rgba(0,0,0,0.1); }
   .prob-title {
     font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 17px;
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.005em;
     margin: 0 0 8px;
     color: var(--ink-900);
   }
   .prob-copy {
-    font-size: 14px;
+    font-size: 14.5px;
+    font-weight: 500;
     color: var(--ink-500);
     line-height: 1.55;
     margin: 0;
@@ -481,16 +616,16 @@
   .prob-stat {
     margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px dashed var(--line);
+    border-top: 2px dotted var(--line);
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 13px;
     color: var(--deep-700);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .prob-stat span { color: var(--ink-400); font-weight: 500; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .prob-stat span { color: var(--ink-400); font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; }
 
   /* ---------- Solution split ---------- */
   .solution-split {
@@ -504,24 +639,26 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: white;
-    border: 1px solid var(--line-2);
-    transition: border-color .2s ease, transform .2s ease;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    background: #fff;
+    border: 2px solid var(--line-2);
+    transition: border-color .25s ease, transform .25s var(--spring), box-shadow .25s ease;
   }
-  .feat-row:hover { border-color: #EF9A4A; transform: translateX(2px); }
+  .feat-row:hover { border-color: var(--orange); transform: translateX(6px); box-shadow: var(--shadow-sm); }
   .feat-ico {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: linear-gradient(140deg, #FF8800, #743C00);
-    color: white;
+    width: 42px; height: 42px; border-radius: 13px;
+    background: linear-gradient(150deg, var(--sun), var(--orange));
+    color: #fff;
     display: grid; place-items: center;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px -4px rgba(255,136,0,0.55);
+    box-shadow: 0 6px 14px -6px rgba(255,138,0,0.6), inset 0 -2px 0 rgba(0,0,0,0.1);
+    transition: transform .4s var(--spring);
   }
+  .feat-row:hover .feat-ico { transform: rotate(-8deg) scale(1.08); }
   .feat-text { flex: 1; }
-  .feat-text h4 { margin: 0 0 2px; font-family: var(--font-display); font-weight: 600; font-size: 15.5px; letter-spacing: -0.01em; }
-  .feat-text p  { margin: 0; font-size: 13.5px; color: var(--ink-500); line-height: 1.5; }
+  .feat-text h4 { margin: 0 0 2px; font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.005em; color: var(--ink-900); }
+  .feat-text p  { margin: 0; font-size: 14px; font-weight: 500; color: var(--ink-500); line-height: 1.5; }
 
   /* Solution mockup */
   .sol-mock {
@@ -529,67 +666,71 @@
     padding: 30px;
     border-radius: var(--radius-xl);
     background:
-      radial-gradient(50% 70% at 80% 0%, rgba(255, 214, 88, 0.55), transparent 60%),
-      linear-gradient(160deg, #5a2e00, #743C00);
-    box-shadow: var(--shadow-lg);
+      radial-gradient(50% 70% at 82% 4%, rgba(255,201,60,0.7), transparent 60%),
+      radial-gradient(60% 70% at 12% 100%, rgba(255,126,138,0.45), transparent 60%),
+      linear-gradient(160deg, #fff4e0, var(--bg-2));
+    box-shadow: var(--shadow-lg), inset 0 0 0 3px #fff;
     aspect-ratio: 5 / 4;
     overflow: hidden;
   }
+  /* polka dots, not a techy grid */
   .sol-mock::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 36px 36px;
+    background-image: radial-gradient(rgba(120,70,20,0.08) 2px, transparent 2px);
+    background-size: 26px 26px;
   }
   .sol-card-a {
     position: absolute;
     top: 50px; left: 40px; right: 150px;
     height: 280px;
     background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 3px #fff;
     overflow: hidden;
     padding: 20px 22px;
+    transform: rotate(-2deg);
   }
   .sol-card-b {
     position: absolute;
-    right: 40px; bottom: 40px;
+    right: 36px; bottom: 38px;
     width: 270px;
     height: 180px;
     background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 3px #fff;
     overflow: hidden;
     padding: 18px 20px;
+    transform: rotate(3deg);
   }
 
   /* ---------- Showcase ---------- */
-  .showcase { background: white; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); }
+  .showcase { background: transparent; }
 
   .showcase-tabs {
     display: inline-flex;
-    padding: 4px;
-    background: var(--bg-2);
+    padding: 6px;
+    background: #fff;
     border-radius: 999px;
-    border: 1px solid var(--line);
-    margin-bottom: 40px;
-    gap: 4px;
+    box-shadow: inset 0 0 0 2px var(--line);
+    margin-bottom: 44px;
+    gap: 6px;
   }
   .showcase-tab {
-    padding: 9px 18px;
-    font-size: 13.5px;
-    font-weight: 500;
+    padding: 11px 22px;
+    font-family: var(--font-display);
+    font-size: 14.5px;
+    font-weight: 700;
     border-radius: 999px;
     color: var(--ink-500);
-    transition: all .2s ease;
+    transition: transform .2s var(--spring), background .2s ease, color .2s ease, box-shadow .2s ease;
   }
+  .showcase-tab:hover { color: var(--ink-900); }
   .showcase-tab.active {
-    background: white;
-    color: var(--ink-900);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(180deg, #ffa12a, var(--orange));
+    color: #fff;
+    box-shadow: 0 5px 0 var(--orange-d), 0 12px 22px -10px rgba(255,138,0,0.7);
   }
 
   .mobile-row {
@@ -598,24 +739,31 @@
     gap: 30px;
     align-items: end;
   }
+  /* mini phones rest at playful angles, straighten on hover */
   .mini-phone {
     position: relative;
     padding-top: 16px;
+    transition: transform .4s var(--spring);
   }
+  .mini-phone:nth-child(odd)  { transform: rotate(-2.5deg); }
+  .mini-phone:nth-child(even) { transform: rotate(2.5deg); }
+  .mini-phone:hover { transform: rotate(0deg) translateY(-10px); z-index: 2; }
   .mini-phone-label {
     text-align: center;
-    margin-top: 22px;
+    margin-top: 24px;
   }
   .mini-phone-label h5 {
     margin: 0 0 4px;
     font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.005em;
+    color: var(--ink-900);
   }
   .mini-phone-label p {
     margin: 0;
-    font-size: 13px;
+    font-size: 13.5px;
+    font-weight: 600;
     color: var(--ink-500);
   }
   .mp-frame {
@@ -623,16 +771,17 @@
     margin: 0 auto;
     width: 220px;
     height: 450px;
-    border-radius: 34px;
-    background: linear-gradient(160deg, #3d1f00, #743C00);
+    border-radius: 42px;
+    background: linear-gradient(160deg, #2a2a2a, #000000);
     padding: 8px;
     box-shadow:
-      0 20px 40px -14px rgba(61,31,0,0.35),
-      inset 0 0 0 1px rgba(255,255,255,0.06);
+      0 24px 44px -16px rgba(120,70,20,0.4),
+      0 0 0 5px #fff,
+      0 0 0 8px var(--bg-2);
   }
   .mp-screen {
     width: 100%; height: 100%;
-    border-radius: 26px;
+    border-radius: 34px;
     overflow: hidden;
     position: relative;
   }
@@ -640,47 +789,46 @@
     position: absolute;
     top: 14px; left: 50%; transform: translateX(-50%);
     width: 66px; height: 16px;
-    background: #3d1f00;
+    background: #000;
     border-radius: 999px;
     z-index: 3;
   }
 
   .dashboard-showcase {
-    margin-top: 56px;
-    padding: 20px;
-    background: linear-gradient(180deg, var(--bg-2), var(--bg));
+    margin-top: 60px;
+    padding: 22px;
+    background: linear-gradient(180deg, #fff4e0, var(--bg-2));
     border-radius: var(--radius-xl);
-    box-shadow: inset 0 0 0 1px var(--line);
+    box-shadow: inset 0 0 0 3px #fff, var(--shadow-sm);
   }
   .dash-window {
     background: white;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     overflow: hidden;
-    border: 1px solid var(--line-2);
+    border: 2px solid var(--line-2);
   }
 
   /* ---------- Why OCare ---------- */
-  .why {
-    background: linear-gradient(180deg, var(--bg-2), var(--bg));
-  }
+  .why { background: transparent; }
   .why-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    gap: 20px;
   }
   .why-card {
     position: relative;
     background: white;
     border-radius: var(--radius-lg);
     padding: 28px 26px 30px;
-    border: 1px solid var(--line-2);
+    border: 2px solid var(--line-2);
     overflow: hidden;
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition: transform .3s var(--spring), box-shadow .3s var(--spring), border-color .3s ease;
   }
   .why-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px) rotate(1deg);
     box-shadow: var(--shadow);
+    border-color: var(--sun);
   }
   .why-card::before {
     content: "";
@@ -688,40 +836,46 @@
     top: -60px; right: -60px;
     width: 160px; height: 160px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 214, 88, 0.6), transparent 70%);
+    background: radial-gradient(circle, rgba(255,201,60,0.65), transparent 70%);
     filter: blur(6px);
   }
   .why-num {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: #FF8800;
-    letter-spacing: 0.1em;
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--orange);
+    letter-spacing: 0.06em;
     margin-bottom: 80px;
     position: relative;
     z-index: 1;
-    font-weight: 600;
+    font-weight: 800;
   }
   .why-ico {
-    width: 54px; height: 54px;
-    border-radius: 14px;
-    background: linear-gradient(140deg, #FFD658, #EF9A4A);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4), 0 8px 20px -10px rgba(255,136,0,0.55);
+    width: 58px; height: 58px;
+    border-radius: 17px;
+    background: linear-gradient(150deg, var(--sun), var(--orange));
+    box-shadow: 0 10px 22px -10px rgba(255,138,0,0.6), inset 0 -3px 0 rgba(0,0,0,0.1);
     display: grid; place-items: center;
-    color: #743C00;
+    color: #fff;
     margin-bottom: 22px;
     position: relative; z-index: 1;
+    transition: transform .4s var(--spring);
   }
+  .why-card:hover .why-ico { transform: rotate(-10deg) scale(1.08); }
+  .why-card:nth-child(2) .why-ico { background: linear-gradient(150deg, #ffb0b8, var(--coral)); }
+  .why-card:nth-child(3) .why-ico { background: linear-gradient(150deg, #9be0ff, var(--sky)); }
+  .why-card:nth-child(4) .why-ico { background: linear-gradient(150deg, #8ee9c6, var(--mint)); }
   .why-title {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 19px;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.01em;
     margin: 0 0 8px;
     color: var(--ink-900);
     position: relative; z-index: 1;
   }
   .why-copy {
-    font-size: 14px;
+    font-size: 14.5px;
+    font-weight: 500;
     color: var(--ink-500);
     line-height: 1.55;
     margin: 0 0 22px;
@@ -729,13 +883,13 @@
   }
   .why-metric {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: -0.02em;
-    color: #743C00;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    color: var(--deep-700);
     position: relative; z-index: 1;
   }
-  .why-metric small { font-size: 12px; color: var(--ink-500); font-weight: 500; letter-spacing: 0; display: block; margin-top: 2px; font-family: var(--font-body); }
+  .why-metric small { font-size: 12.5px; color: var(--ink-500); font-weight: 700; letter-spacing: 0; display: block; margin-top: 2px; font-family: var(--font-body); }
 
   /* ---------- Testimonials ---------- */
   .trust-grid {
@@ -747,97 +901,113 @@
     padding: 34px;
     border-radius: var(--radius-lg);
     background: white;
-    border: 1px solid var(--line-2);
+    border: 2px solid var(--line-2);
     box-shadow: var(--shadow-sm);
     display: flex; flex-direction: column;
+    transition: transform .3s var(--spring), box-shadow .3s var(--spring);
   }
+  .testimonial:hover { transform: translateY(-5px) rotate(-1deg); box-shadow: var(--shadow); }
   .testimonial.featured {
-    background: linear-gradient(160deg, #5a2e00, #743C00);
-    color: white;
+    background: linear-gradient(155deg, #ffb84d, var(--orange));
+    color: #fff;
     border-color: transparent;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 3px #fff;
     position: relative;
     overflow: hidden;
   }
+  .testimonial.featured:hover { transform: translateY(-5px) rotate(1deg); }
   .testimonial.featured::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(60% 70% at 100% 0%, rgba(255, 214, 88, 0.55), transparent 60%);
+    background: radial-gradient(60% 70% at 100% 0%, rgba(255,201,60,0.6), transparent 60%);
   }
   .t-quote {
     font-family: var(--font-display);
     font-size: 22px;
-    line-height: 1.35;
-    letter-spacing: -0.015em;
-    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+    font-weight: 600;
     margin: 0 0 28px;
     text-wrap: pretty;
     flex: 1;
     position: relative;
   }
-  .testimonial.featured .t-quote { font-size: 26px; }
+  .testimonial.featured .t-quote { font-size: 26px; font-weight: 700; }
   .t-meta {
     display: flex; align-items: center; gap: 14px;
     position: relative;
   }
   .t-ava {
-    width: 44px; height: 44px; border-radius: 999px;
-    background: linear-gradient(140deg, #FFD658, #FF8800);
+    width: 48px; height: 48px; border-radius: 999px;
+    background: linear-gradient(140deg, var(--sun), var(--orange));
     display: grid; place-items: center;
-    color: #3d1f00;
-    font-weight: 700;
+    color: #fff;
+    font-weight: 800;
     font-family: var(--font-display);
-    font-size: 15px;
+    font-size: 16px;
     flex-shrink: 0;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.12);
   }
   .testimonial.featured .t-ava {
-    background: #FFD658;
-    color: #743C00;
+    background: #fff;
+    color: var(--orange);
+    box-shadow: none;
   }
-  .t-name { font-weight: 600; font-size: 14.5px; margin: 0; font-family: var(--font-display); letter-spacing: -0.01em; }
-  .t-role { margin: 2px 0 0; font-size: 12.5px; opacity: 0.7; }
+  .t-name { font-weight: 800; font-size: 15px; margin: 0; font-family: var(--font-display); letter-spacing: -0.005em; }
+  .t-role { margin: 2px 0 0; font-size: 12.5px; font-weight: 600; opacity: 0.75; }
 
-  /* ---------- Final CTA ---------- */
+  /* ---------- Final CTA (puffy billboard with floating blobs) ---------- */
   .final-cta {
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
-    background:
-      radial-gradient(60% 80% at 50% 100%, rgba(255, 136, 0, 0.45), transparent 60%),
-      radial-gradient(40% 60% at 80% 20%, rgba(255, 214, 88, 0.35), transparent 60%),
-      linear-gradient(160deg, #3d1f00, #743C00 70%);
-    color: white;
     overflow: hidden;
   }
   .final-cta::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(60% 80% at 50% 50%, #000 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(60% 80% at 50% 50%, #000 30%, transparent 80%);
+    top: 12%; left: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle at 40% 35%, #ffd877, var(--orange) 72%);
+    border-radius: 47% 53% 44% 56% / 55% 46% 54% 45%;
+    opacity: 0.5;
+    animation: blobFloat 15s ease-in-out infinite;
+  }
+  .final-cta::after {
+    content: "";
+    position: absolute;
+    bottom: 8%; right: -50px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at 40% 35%, #9be0ff, var(--sky) 72%);
+    border-radius: 53% 47% 56% 44% / 46% 55% 45% 54%;
+    opacity: 0.45;
+    animation: blobFloat 18s ease-in-out infinite reverse;
   }
   .final-cta-inner {
     position: relative;
+    z-index: 1;
     text-align: center;
-    max-width: 760px;
+    max-width: 820px;
     margin: 0 auto;
+    background: #fff;
+    border-radius: var(--radius-xl);
+    padding: 64px 56px;
+    box-shadow: var(--shadow-lg), inset 0 0 0 3px var(--line-2);
   }
   .final-cta h2 {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(36px, 4.5vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -0.035em;
-    margin: 0 0 20px;
+    font-weight: 800;
+    font-size: clamp(38px, 4.8vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 18px 0 20px;
+    color: var(--ink-900);
     text-wrap: balance;
   }
   .final-cta p {
     font-size: 19px;
-    opacity: 0.78;
+    font-weight: 600;
+    opacity: 0.8;
     margin: 0 0 36px;
     max-width: 560px;
     margin-left: auto; margin-right: auto;
@@ -846,18 +1016,22 @@
 
   /* ---------- Footer ---------- */
   footer {
-    background: var(--bg);
-    padding: 72px 0 32px;
-    border-top: 1px solid var(--line);
+    background: rgba(255,255,255,0.55);
+    padding: 72px 0 36px;
+    border-top: 2px dashed var(--line);
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+    margin-top: 24px;
   }
   .foot-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 48px;
     margin-bottom: 56px;
   }
   .foot-about {
-    font-size: 14px;
+    font-size: 14.5px;
+    font-weight: 500;
     color: var(--ink-500);
     line-height: 1.55;
     margin-top: 16px;
@@ -865,27 +1039,30 @@
   }
   .foot-col h5 {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 800;
     font-size: 13px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--ink-700);
     margin: 0 0 16px;
   }
   .foot-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .foot-col a {
-    font-size: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
     color: var(--ink-500);
-    transition: color .15s ease;
+    transition: color .15s ease, transform .2s var(--spring);
+    display: inline-block;
   }
-  .foot-col a:hover { color: var(--ink-900); }
+  .foot-col a:hover { color: var(--orange); transform: translateX(3px); }
   .foot-bottom {
     padding-top: 28px;
-    border-top: 1px solid var(--line);
+    border-top: 2px dotted var(--line);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
+    font-weight: 600;
     color: var(--ink-500);
     flex-wrap: wrap;
     gap: 16px;
@@ -895,6 +1072,18 @@
   /* Animations */
   @keyframes pulse { 0% { transform: scale(1); opacity: .4 } 100% { transform: scale(1.4); opacity: 0 } }
   @keyframes blink { 0%, 50% { opacity: 1 } 51%, 100% { opacity: 0 } }
+
+  /* scroll reveal — pops in with a little bounce. Gated on .js so no-JS shows everything. */
+  .js .reveal { opacity: 0; transform: translateY(26px) scale(0.96); }
+  .js .reveal.in {
+    opacity: 1; transform: none;
+    transition: opacity .6s ease, transform .7s var(--spring);
+  }
+
+  @media (max-width: 720px) {
+    .final-cta-inner { padding: 44px 26px; }
+    .eyebrow { transform: none; }
+  }
 
   /* Responsive */
   @media (max-width: 1000px) {
@@ -943,16 +1132,25 @@
         <a href="#problem">Why OCare</a>
         <a href="#solution">Platform</a>
         <a href="#showcase">Product</a>
-        <a href="#trust">Customers</a>
-        <a href="#cta">Pricing</a>
-        <a href="#cta">Resources</a>
       </div>
       <div class="nav-cta">
-        <a href="#cta" class="btn btn-ghost btn-sm">Sign in</a>
-        <a href="#cta" class="btn btn-primary btn-sm">
-          Download App
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+        <details class="store-menu">
+          <summary class="btn btn-primary btn-sm">
+            Download App
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="store-pop">
+            <!-- TODO: swap to exact App Store / Google Play app URLs -->
+            <a class="store-link" href="https://apps.apple.com/" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.13 2.99-.78.87-2.05 1.54-3.12 1.46-.13-1.1.42-2.27 1.07-2.99.78-.86 2.14-1.5 3.18-1.46zM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.01-1.93-.99-4.02-.98-2.09.01-2.52.99-4.06.98-1.73-.02-3.06-1.78-4.05-3.34C-.07 16.97-.4 12.07 1.27 9.4 2.43 7.5 4.31 6.34 6.08 6.34c1.8 0 2.93 1 4.42 1 1.44 0 2.32-1 4.4-1 1.57 0 3.24.86 4.42 2.34-3.88 2.13-3.25 7.68 1.18 8.52z"/></svg>
+              <span><small>Download on the</small><b>App Store</b></span>
+            </a>
+            <a class="store-link" href="https://play.google.com/store/apps" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2.5v19a.5.5 0 0 0 .76.43l16.5-9.5a.5.5 0 0 0 0-.86L3.76 2.07A.5.5 0 0 0 3 2.5z"/></svg>
+              <span><small>Get it on</small><b>Google Play</b></span>
+            </a>
+          </div>
+        </details>
       </div>
     </nav>
   </div>
@@ -975,10 +1173,23 @@
         </h1>
         <p class="hero-sub">Empowering every connection with care. OCare unites parents, teachers, counsellors and students under one secure, emotionally intelligent platform — so nothing, and no one, goes unnoticed.</p>
         <div class="hero-cta">
-          <a href="#cta" class="btn btn-primary">
-             Download App Now
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <details class="store-menu">
+            <summary class="btn btn-primary">
+              Download App Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="store-pop">
+              <!-- TODO: swap to exact App Store / Google Play app URLs -->
+              <a class="store-link" href="https://apps.apple.com/" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.13 2.99-.78.87-2.05 1.54-3.12 1.46-.13-1.1.42-2.27 1.07-2.99.78-.86 2.14-1.5 3.18-1.46zM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.01-1.93-.99-4.02-.98-2.09.01-2.52.99-4.06.98-1.73-.02-3.06-1.78-4.05-3.34C-.07 16.97-.4 12.07 1.27 9.4 2.43 7.5 4.31 6.34 6.08 6.34c1.8 0 2.93 1 4.42 1 1.44 0 2.32-1 4.4-1 1.57 0 3.24.86 4.42 2.34-3.88 2.13-3.25 7.68 1.18 8.52z"/></svg>
+                <span><small>Download on the</small><b>App Store</b></span>
+              </a>
+              <a class="store-link" href="https://play.google.com/store/apps" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2.5v19a.5.5 0 0 0 .76.43l16.5-9.5a.5.5 0 0 0 0-.86L3.76 2.07A.5.5 0 0 0 3 2.5z"/></svg>
+                <span><small>Get it on</small><b>Google Play</b></span>
+              </a>
+            </div>
+          </details>
           <a href="#showcase" class="btn btn-ghost">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             See product
@@ -1186,47 +1397,8 @@
 
         <!-- Phone -->
         <div class="phone">
-          <div class="phone-notch"></div>
           <div class="phone-screen">
-            <div style="padding:18px 22px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;color:#3d1f00">
-              <span>9:41</span>
-              <div style="display:flex;gap:4px;align-items:center">
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><rect x="1" y="7" width="2" height="2" fill="#3d1f00"/><rect x="4" y="5" width="2" height="4" fill="#3d1f00"/><rect x="7" y="3" width="2" height="6" fill="#3d1f00"/><rect x="10" y="1" width="2" height="8" fill="#3d1f00"/></svg>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><rect x="0.5" y="0.5" width="13" height="9" rx="2" stroke="#3d1f00"/><rect x="2" y="2" width="10" height="6" rx="1" fill="#3d1f00"/><rect x="14" y="3" width="1.5" height="4" rx="0.5" fill="#3d1f00"/></svg>
-              </div>
-            </div>
-            <div style="padding:20px 22px 16px">
-              <div style="font-size:13px;color:#8f6a42">Hi Arjun 👋</div>
-              <div style="font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;color:#3d1f00;line-height:1.15;margin-top:2px">How are you feeling today?</div>
-            </div>
-            <div style="padding:0 22px;display:flex;justify-content:space-between;gap:6px;margin-bottom:22px">
-              <div style="flex:1;aspect-ratio:1;border-radius:14px;background:linear-gradient(160deg,#fecaca,#fca5a5);display:grid;place-items:center;font-size:22px">😞</div>
-              <div style="flex:1;aspect-ratio:1;border-radius:14px;background:linear-gradient(160deg,#fed7aa,#fdba74);display:grid;place-items:center;font-size:22px">😕</div>
-              <div style="flex:1;aspect-ratio:1;border-radius:14px;background:linear-gradient(160deg,#fde68a,#fcd34d);display:grid;place-items:center;font-size:22px">😐</div>
-              <div style="flex:1;aspect-ratio:1;border-radius:14px;background:linear-gradient(160deg, #FFD658,#FF8800);display:grid;place-items:center;font-size:22px;box-shadow:0 0 0 3px #FF8800,0 10px 20px -6px rgba(255,136,0,0.5)">🙂</div>
-              <div style="flex:1;aspect-ratio:1;border-radius:14px;background:linear-gradient(160deg,#FDE3A6,#FFD658);display:grid;place-items:center;font-size:22px">😊</div>
-            </div>
-            <div style="margin:0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.7);backdrop-filter:blur(8px);border:1px solid rgba(61,31,0,0.06);font-size:12px;color:#8f6a42;line-height:1.4">
-              <div style="font-weight:600;color:#3d1f00;font-size:11.5px;margin-bottom:3px;letter-spacing:0.02em">Private note (only you)</div>
-              Today went better than yesterday. I think talking to Ms. Ravi helped.
-            </div>
-            <div style="position:absolute;bottom:70px;left:22px;right:22px;padding:14px 16px;border-radius:16px;background:linear-gradient(140deg,#ef4444,#dc2626);color:white;display:flex;align-items:center;justify-content:space-between;box-shadow:0 14px 30px -8px rgba(220,38,38,0.5)">
-              <div>
-                <div style="font-weight:600;font-size:13px;font-family:var(--font-display)">SOS — I need help</div>
-                <div style="font-size:10.5px;opacity:0.85;margin-top:1px">Confidential · Counsellor alerted instantly</div>
-              </div>
-              <div style="width:32px;height:32px;border-radius:999px;background:white;color:#dc2626;display:grid;place-items:center">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-              </div>
-            </div>
-            <div style="position:absolute;bottom:8px;left:12px;right:12px;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:22px;padding:8px 6px;display:flex;justify-content:space-around;border:1px solid rgba(61,31,0,0.08)">
-              <div style="padding:6px;border-radius:10px;background:linear-gradient(140deg, #FF8800, #743C00);color:white;width:32px;height:32px;display:grid;place-items:center">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              </div>
-              <div style="padding:6px;color:#8f6a42"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-              <div style="padding:6px;color:#8f6a42"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
-              <div style="padding:6px;color:#8f6a42"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-            </div>
+            <img src="assets/hero-app.png" alt="OCare app — Whisper Feed" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
         </div>
       </div>
@@ -1235,7 +1407,7 @@
 </section>
 
 <!-- ========== LOGO STRIP ========== -->
-<div class="logo-strip">
+<!-- <div class="logo-strip">
   <div class="container">
     <div class="logo-strip-inner">
       <div class="logo-strip-label">Trusted by schools, districts &amp; <b>education ministries</b> across 14 countries</div>
@@ -1265,7 +1437,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- ========== PROBLEM ========== -->
 <section class="problems" id="problem">
@@ -1327,10 +1499,6 @@
           <li class="feat-row">
             <div class="feat-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 11c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM6 9l6-6 6 6M6 9v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/></svg></div>
             <div class="feat-text"><h4>Anonymous emotional outlet</h4><p>A judgement-free diary &amp; check-in where students can share feelings without fear.</p></div>
-          </li>
-          <li class="feat-row">
-            <div class="feat-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-            <div class="feat-text"><h4>Secure parent‑teacher‑student chat</h4><p>End-to-end encrypted threads, role-aware routing, full audit trail for schools.</p></div>
           </li>
           <li class="feat-row">
             <div class="feat-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div>
@@ -1408,41 +1576,8 @@
     <div class="mobile-row" aria-hidden="true">
       <div class="mini-phone">
         <div class="mp-frame">
-          <div class="mp-notch"></div>
-          <div class="mp-screen" style="background:linear-gradient(180deg,#F8F8F8,#FDE3A6);padding:32px 14px 14px">
-            <div style="font-size:10px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.08em;font-weight:600">Inbox</div>
-            <div style="font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-0.02em;margin:2px 0 12px;color:#3d1f00">Messages</div>
-            <div style="display:grid;gap:8px">
-              <div style="padding:10px;border-radius:12px;background:white;display:flex;gap:10px;align-items:center;box-shadow:0 2px 6px rgba(61,31,0,0.04)">
-                <div style="width:32px;height:32px;border-radius:999px;background:linear-gradient(140deg, var(--cyan-300), var(--teal-500));flex-shrink:0;display:grid;place-items:center;color:white;font-size:11px;font-weight:600">MR</div>
-                <div style="flex:1;min-width:0">
-                  <div style="font-weight:600;font-size:11.5px;color:#3d1f00">Ms. Ravi</div>
-                  <div style="font-size:10px;color:#8f6a42;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Meet at 2pm today?</div>
-                </div>
-                <div style="width:6px;height:6px;border-radius:999px;background:var(--teal-500)"></div>
-              </div>
-              <div style="padding:10px;border-radius:12px;background:white;display:flex;gap:10px;align-items:center">
-                <div style="width:32px;height:32px;border-radius:999px;background:linear-gradient(140deg,#fde68a,#fcd34d);flex-shrink:0;display:grid;place-items:center;font-size:13px">📚</div>
-                <div style="flex:1;min-width:0">
-                  <div style="font-weight:600;font-size:11.5px;color:#3d1f00">Maths · Mr. Iyer</div>
-                  <div style="font-size:10px;color:#8f6a42;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Assignment due Fri</div>
-                </div>
-              </div>
-              <div style="padding:10px;border-radius:12px;background:white;display:flex;gap:10px;align-items:center">
-                <div style="width:32px;height:32px;border-radius:999px;background:linear-gradient(140deg,#FDE3A6,#FFD658);flex-shrink:0;display:grid;place-items:center;font-size:11px;color:#743C00;font-weight:600">PA</div>
-                <div style="flex:1;min-width:0">
-                  <div style="font-weight:600;font-size:11.5px;color:#3d1f00">Parent group · 9A</div>
-                  <div style="font-size:10px;color:#8f6a42;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Field trip on Tuesday</div>
-                </div>
-              </div>
-              <div style="padding:10px;border-radius:12px;background:white;display:flex;gap:10px;align-items:center">
-                <div style="width:32px;height:32px;border-radius:999px;background:linear-gradient(140deg,#FDE3A6,#EF9A4A);flex-shrink:0;display:grid;place-items:center;font-size:11px;color:#743C00;font-weight:600">JH</div>
-                <div style="flex:1;min-width:0">
-                  <div style="font-weight:600;font-size:11.5px;color:#3d1f00">Coach Joshi</div>
-                  <div style="font-size:10px;color:#8f6a42;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Practice moved to 5pm</div>
-                </div>
-              </div>
-            </div>
+          <div class="mp-screen">
+            <img src="assets/secure-chat-app.png" alt="OCare app — Secure chat" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
         </div>
         <div class="mini-phone-label"><h5>Secure chat</h5><p>Role-aware, encrypted threads</p></div>
@@ -1450,22 +1585,8 @@
 
       <div class="mini-phone">
         <div class="mp-frame">
-          <div class="mp-notch"></div>
-          <div class="mp-screen" style="background:linear-gradient(180deg, #FDE3A6, #FFD658);padding:32px 14px 14px">
-            <div style="text-align:center;margin:10px 0 18px">
-              <div style="font-size:10px;color:#743C00;text-transform:uppercase;letter-spacing:0.08em;font-weight:600">Daily check‑in</div>
-              <div style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.02em;margin-top:4px;color:#3d1f00;line-height:1.2">How are you<br>feeling?</div>
-            </div>
-            <div style="margin:0 auto;width:150px;height:150px;border-radius:999px;background:
-                radial-gradient(circle at 40% 35%, white 0%, transparent 35%),
-                conic-gradient(from 220deg, #EF9A4A, #FF8800, #743C00, #EF9A4A);
-                box-shadow:0 12px 30px -8px rgba(255,136,0,0.5);display:grid;place-items:center">
-              <div style="width:100px;height:100px;border-radius:999px;background:white;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-0.03em;color:#3d1f00">7.4</div>
-            </div>
-            <div style="display:flex;justify-content:space-between;margin:18px 6px 0;font-size:18px">
-              <span>😞</span><span>😕</span><span>😐</span><span style="transform:scale(1.3);filter:drop-shadow(0 4px 8px rgba(0,0,0,0.15))">🙂</span><span>😊</span>
-            </div>
-            <div style="text-align:center;margin-top:14px;padding:8px 10px;background:rgba(255,255,255,0.7);border-radius:10px;font-size:10.5px;color:#743C00">Today is better than yesterday ✨</div>
+          <div class="mp-screen">
+            <img src="assets/mood-checkin-app.png" alt="OCare app — Mood check-in" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
         </div>
         <div class="mini-phone-label"><h5>Mood check‑in</h5><p>30‑second daily pulse</p></div>
@@ -1473,21 +1594,8 @@
 
       <div class="mini-phone">
         <div class="mp-frame">
-          <div class="mp-notch"></div>
-          <div class="mp-screen" style="background:#3d1f00;padding:32px 14px 14px;color:white">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;opacity:0.7">Anonymous · for you only</div>
-            </div>
-            <div style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.02em;line-height:1.2;margin-bottom:14px">Today I felt…</div>
-            <div style="padding:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;font-size:11.5px;line-height:1.5;color:rgba(255,255,255,0.85);min-height:120px">
-              I didn't want to go to class this morning. But we sat with Neha at lunch and she made me laugh. Maybe tomorrow will be okay.<span style="display:inline-block;width:1px;height:12px;background:#EF9A4A;margin-left:2px;animation:blink 1s step-end infinite"></span>
-            </div>
-            <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
-              <span style="padding:4px 10px;border-radius:999px;background:#743C00;font-size:10px;font-weight:500">#anxious</span>
-              <span style="padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.08);font-size:10px;font-weight:500;color:rgba(255,255,255,0.7)">+ add</span>
-            </div>
-            <div style="position:absolute;bottom:22px;left:14px;right:14px;padding:10px;background:linear-gradient(140deg, var(--teal-500), var(--deep-700));border-radius:12px;text-align:center;font-size:12px;font-weight:600">Save privately</div>
+          <div class="mp-screen">
+            <img src="assets/diary-app.png" alt="OCare app — Anonymous diary" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
         </div>
         <div class="mini-phone-label"><h5>Anonymous diary</h5><p>A safe space for every thought</p></div>
@@ -1495,21 +1603,8 @@
 
       <div class="mini-phone">
         <div class="mp-frame">
-          <div class="mp-notch"></div>
-          <div class="mp-screen" style="background:linear-gradient(180deg,#fff5f5,#fee2e2);padding:32px 14px 14px">
-            <div style="text-align:center;margin:6px 0 16px">
-              <div style="font-size:10px;color:#991b1b;text-transform:uppercase;letter-spacing:0.1em;font-weight:700">Confidential SOS</div>
-              <div style="font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-0.02em;margin-top:4px;color:#3d1f00;line-height:1.2">Press &amp; hold<br>to alert help</div>
-            </div>
-            <div style="position:relative;margin:0 auto;width:150px;height:150px">
-              <div style="position:absolute;inset:0;border-radius:999px;background:radial-gradient(circle,#dc2626,#991b1b);display:grid;place-items:center;color:white;font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;box-shadow:0 14px 35px -8px rgba(220,38,38,0.6)">SOS</div>
-              <div style="position:absolute;inset:-12px;border:2px solid #dc2626;border-radius:999px;opacity:0.4;animation:pulse 2s ease-out infinite"></div>
-              <div style="position:absolute;inset:-24px;border:2px solid #dc2626;border-radius:999px;opacity:0.2;animation:pulse 2s ease-out infinite .6s"></div>
-            </div>
-            <div style="margin-top:22px;padding:10px;background:white;border-radius:10px;display:flex;gap:8px;align-items:center;font-size:10.5px;color:#5a3a1a;border:1px solid #fecaca">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Location shared · Counsellor alerted
-            </div>
+          <div class="mp-screen">
+            <img src="assets/sos-app.png" alt="OCare app — One-tap SOS" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
         </div>
         <div class="mini-phone-label"><h5>One‑tap SOS</h5><p>Counsellor alerted in 3 seconds</p></div>
@@ -1518,285 +1613,181 @@
 
     <div class="dashboard-showcase" aria-hidden="true">
       <div class="dash-window">
-        <div style="height:42px;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid var(--line-2);background:var(--bg-2)">
-          <div style="display:flex;gap:6px">
-            <span style="width:11px;height:11px;border-radius:999px;background:#ff5f57"></span>
-            <span style="width:11px;height:11px;border-radius:999px;background:#ffbd2e"></span>
-            <span style="width:11px;height:11px;border-radius:999px;background:#28c941"></span>
+          <div style="height:38px;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid var(--line-2);background:var(--bg-2)">
+            <div style="display:flex;gap:6px">
+              <span style="width:10px;height:10px;border-radius:999px;background:#ff5f57"></span>
+              <span style="width:10px;height:10px;border-radius:999px;background:#ffbd2e"></span>
+              <span style="width:10px;height:10px;border-radius:999px;background:#28c941"></span>
+            </div>
+            <div style="margin:0 auto;padding:3px 14px;background:white;border-radius:6px;font-size:11px;color:var(--ink-500);font-family:var(--font-mono);border:1px solid var(--line-2)">admin.ocare.ocgt.app/dashboard</div>
           </div>
-          <div style="margin:0 auto;padding:4px 16px;background:white;border-radius:7px;font-size:12px;color:var(--ink-500);font-family:var(--font-mono);border:1px solid var(--line-2)">admin.ocare.ocgt.app/analytics</div>
-        </div>
 
-        <div style="display:grid;grid-template-columns:220px 1fr;min-height:560px">
-          <aside style="border-right:1px solid var(--line-2);padding:22px 14px;background:var(--bg)">
-            <div style="display:flex;align-items:center;gap:10px;padding:0 8px 16px;border-bottom:1px solid var(--line-2)">
-              <span class="brand-mark" style="width:28px;height:28px;border-radius:7px"><img src="assets/ocare.png" alt=""></span>
-              <div>
-                <div style="font-family:var(--font-display);font-weight:600;font-size:13.5px;letter-spacing:-0.01em">Riverbend Academy</div>
-                <div style="font-size:10.5px;color:var(--ink-500)">Admin · K‑12</div>
+          <div style="display:grid;grid-template-columns:170px 1fr;min-height:560px;background:var(--bg)">
+            <aside style="border-right:1px solid var(--line-2);padding:14px 10px;background:white;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:8px;padding:0 6px 12px;border-bottom:1px solid var(--line-2)">
+                <span class="brand-mark" style="width:26px;height:26px;border-radius:7px"><img src="assets/ocare.png" alt=""></span>
+                <div style="display:flex;flex-direction:column;line-height:1.15">
+                  <span style="font-family:var(--font-display);font-weight:700;font-size:12px">O'care</span>
+                  <span style="font-size:9.5px;color:var(--ink-400)">Admin Portal</span>
+                </div>
               </div>
-            </div>
-            <div style="margin:16px 0 8px;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-400);padding:0 8px">Main</div>
-            <div style="display:grid;gap:3px">
-              <div style="padding:8px 12px;border-radius:9px;background:linear-gradient(140deg, var(--deep-700), var(--teal-500));color:white;font-size:12.5px;font-weight:500;display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                Dashboard
+              <div style="display:grid;gap:2px;margin-top:10px">
+                <div style="padding:7px 10px;border-radius:8px;background:linear-gradient(140deg,#FF8800,#EF9A4A);color:white;font-size:11px;font-weight:600;display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                  Dashboard
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18M9 22v-6h6v6"/></svg>
+                  Schools
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                  Students
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                  Parents
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  Teachers
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+                  Coordinators
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 11l18-7v16L3 13z"/><path d="M11 13v5"/></svg>
+                  Announcements
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+                  Analytics
+                </div>
+                <div style="padding:7px 10px;font-size:11px;color:var(--ink-500);display:flex;align-items:center;gap:8px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  Settings
+                </div>
               </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-                Mood pulse
+              <div style="margin-top:auto;padding:8px;border:1px solid var(--line-2);border-radius:10px;display:flex;align-items:center;gap:8px;background:var(--bg)">
+                <div style="width:26px;height:26px;border-radius:999px;background:linear-gradient(140deg,var(--deep-700),var(--teal-500));color:white;display:grid;place-items:center;font-size:10px;font-weight:700">SA</div>
+                <div style="display:flex;flex-direction:column;line-height:1.15;overflow:hidden">
+                  <span style="font-size:10.5px;font-weight:600">System Admin</span>
+                  <span style="font-size:9px;color:var(--ink-400);text-overflow:ellipsis;overflow:hidden;white-space:nowrap">mohamad.fazuan@ocgloba…</span>
+                </div>
               </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px;justify-content:space-between">
-                <span style="display:flex;align-items:center;gap:10px">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-                  Active alerts
-                </span>
-                <span style="background:#ef4444;color:white;font-size:10px;padding:1px 6px;border-radius:999px;font-weight:600">4</span>
-              </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                Students
-              </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                Tickets
-              </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Reports
-              </div>
-            </div>
-            <div style="margin:20px 0 8px;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-400);padding:0 8px">Settings</div>
-            <div style="display:grid;gap:3px">
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                Configure
-              </div>
-              <div style="padding:8px 12px;font-size:12.5px;color:var(--ink-700);display:flex;align-items:center;gap:10px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Safeguarding
-              </div>
-            </div>
+            </aside>
 
-            <div style="margin-top:28px;padding:12px;border-radius:10px;background:linear-gradient(160deg, #FDE3A6, #FFD658);border:1px solid #EF9A4A">
-              <div style="font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:-0.01em">Weekly wellness report</div>
-              <div style="font-size:10.5px;color:var(--ink-500);margin-top:4px;line-height:1.4">Ready for review · 8 insights</div>
-              <div style="margin-top:8px;padding:5px;background:white;border-radius:6px;text-align:center;font-size:10.5px;font-weight:600;color:var(--deep-700)">Open report →</div>
-            </div>
-          </aside>
-
-          <div style="padding:24px 28px">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px">
-              <div>
-                <div style="font-size:11.5px;color:var(--ink-400);font-weight:500;margin-bottom:4px">Dashboard / Overview</div>
-                <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.02em">Good morning, Priya</div>
-                <div style="font-size:12.5px;color:var(--ink-500);margin-top:2px">4 alerts need your attention today · Mood index up 0.3 pts vs last week</div>
-              </div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="width:34px;height:34px;border-radius:10px;background:var(--bg-2);display:grid;place-items:center;border:1px solid var(--line-2)">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 21l-4.35-4.35M10 17a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
-                </div>
-                <div style="padding:7px 12px;background:var(--bg-2);border-radius:10px;font-size:12px;color:var(--ink-700);border:1px solid var(--line-2);display:flex;align-items:center;gap:6px">
-                  This week
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-                <div style="padding:7px 12px;background:linear-gradient(180deg, var(--deep-700), var(--deep-800));color:white;border-radius:10px;font-size:12px;font-weight:500">+ New report</div>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px">
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                  <div style="font-size:11px;color:var(--ink-500);text-transform:uppercase;letter-spacing:0.08em;font-weight:500">Active students</div>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF8800" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                </div>
-                <div style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.02em">1,248</div>
-                <div style="font-size:11px;color:#16a34a;margin-top:4px;display:flex;align-items:center;gap:4px">↑ 3.2% <span style="color:var(--ink-400)">vs last week</span></div>
-              </div>
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                  <div style="font-size:11px;color:var(--ink-500);text-transform:uppercase;letter-spacing:0.08em;font-weight:500">Mood index</div>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF8800" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
-                </div>
-                <div style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.02em">7.4 <span style="font-size:14px;color:var(--ink-400);font-weight:500">/ 10</span></div>
-                <div style="font-size:11px;color:var(--teal-500);margin-top:4px;display:flex;align-items:center;gap:4px">↑ 0.3 <span style="color:var(--ink-400)">vs last week</span></div>
-              </div>
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                  <div style="font-size:11px;color:var(--ink-500);text-transform:uppercase;letter-spacing:0.08em;font-weight:500">Open alerts</div>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-                </div>
-                <div style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.02em;color:#ef4444">4</div>
-                <div style="font-size:11px;color:var(--ink-500);margin-top:4px">2 urgent · 2 standard</div>
-              </div>
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                  <div style="font-size:11px;color:var(--ink-500);text-transform:uppercase;letter-spacing:0.08em;font-weight:500">Tickets open</div>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF8800" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                </div>
-                <div style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.02em">17</div>
-                <div style="font-size:11px;color:var(--ink-400);margin-top:4px">Avg. resolution 2.1 days</div>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:12px;margin-bottom:18px">
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:18px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-                  <div>
-                    <div style="font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:-0.01em">Mood trend by cohort</div>
-                    <div style="font-size:11px;color:var(--ink-500);margin-top:2px">Anonymous aggregate · last 14 days</div>
-                  </div>
-                  <div style="display:flex;gap:14px;font-size:11px;color:var(--ink-500)">
-                    <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:3px;background:var(--deep-700)"></span>All grades</span>
-                    <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:3px;background:var(--teal-400)"></span>Grade 9</span>
-                    <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:3px;background:#FFD658"></span>Grade 11</span>
-                  </div>
-                </div>
-                <svg viewBox="0 0 520 200" width="100%" height="200" preserveAspectRatio="none" style="overflow:visible">
-                  <defs>
-                    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#743C00" stop-opacity="0.25"/>
-                      <stop offset="100%" stop-color="#743C00" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <g stroke="#f4e6cc" stroke-width="1">
-                    <line x1="0" y1="40" x2="520" y2="40"/>
-                    <line x1="0" y1="100" x2="520" y2="100"/>
-                    <line x1="0" y1="160" x2="520" y2="160"/>
-                  </g>
-                  <g fill="#8f6a42" font-size="9" font-family="Inter">
-                    <text x="0" y="193">Apr 8</text>
-                    <text x="140" y="193">Apr 12</text>
-                    <text x="280" y="193">Apr 16</text>
-                    <text x="420" y="193">Apr 20</text>
-                    <text x="490" y="193">Today</text>
-                  </g>
-                  <path d="M0,120 C40,110 70,115 110,95 C150,80 190,90 230,65 C270,40 310,55 350,50 C390,45 430,65 470,50 C500,40 510,45 520,40 L520,200 L0,200 Z" fill="url(#g2)"/>
-                  <path d="M0,120 C40,110 70,115 110,95 C150,80 190,90 230,65 C270,40 310,55 350,50 C390,45 430,65 470,50 C500,40 510,45 520,40" fill="none" stroke="#743C00" stroke-width="2.5" stroke-linecap="round"/>
-                  <path d="M0,140 C40,135 70,130 110,115 C150,100 190,110 230,90 C270,75 310,80 350,75 C390,70 430,85 470,70 C500,62 510,65 520,60" fill="none" stroke="#EF9A4A" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
-                  <path d="M0,105 C40,100 70,105 110,85 C150,70 190,75 230,55 C270,35 310,40 350,35 C390,32 430,50 470,38 C500,30 510,32 520,28" fill="none" stroke="#FFD658" stroke-width="2" stroke-linecap="round"/>
-                  <g>
-                    <line x1="470" y1="20" x2="470" y2="170" stroke="#d9c2a1" stroke-dasharray="3 3" stroke-width="1"/>
-                    <circle cx="470" cy="50" r="5" fill="white" stroke="#743C00" stroke-width="2.5"/>
-                    <g transform="translate(390, 15)">
-                      <rect x="0" y="0" width="90" height="32" rx="7" fill="#2a1600"/>
-                      <text x="10" y="14" fill="white" font-size="9" font-family="Inter" font-weight="600">Apr 18 · 7.4</text>
-                      <text x="10" y="26" fill="#FFD658" font-size="8" font-family="Inter">+0.3 vs last wk</text>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px 0;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:center;padding:0 16px 12px;border-bottom:1px solid var(--line-2)">
-                  <div style="font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:-0.01em">Active alerts</div>
-                  <span style="background:#fef2f2;color:#dc2626;font-size:10px;padding:2px 8px;border-radius:999px;font-weight:600;border:1px solid #fecaca">4 open</span>
-                </div>
-                <div style="display:grid">
-                  <div style="padding:12px 16px;border-bottom:1px solid var(--line-2);display:grid;gap:4px">
-                    <div style="display:flex;justify-content:space-between;align-items:center">
-                      <span style="font-size:10px;font-family:var(--font-mono);color:#dc2626;font-weight:600;letter-spacing:0.06em">· URGENT · SOS</span>
-                      <span style="font-size:10px;color:var(--ink-400)">0m ago</span>
-                    </div>
-                    <div style="font-size:12.5px;font-weight:500">Student · Grade 9‑A · Block C</div>
-                    <div style="font-size:10.5px;color:var(--ink-500)">Routed to Ms. Ravi (Counsellor)</div>
-                  </div>
-                  <div style="padding:12px 16px;border-bottom:1px solid var(--line-2);display:grid;gap:4px">
-                    <div style="display:flex;justify-content:space-between;align-items:center">
-                      <span style="font-size:10px;font-family:var(--font-mono);color:#ea580c;font-weight:600;letter-spacing:0.06em">· ELEVATED · Mood flag</span>
-                      <span style="font-size:10px;color:var(--ink-400)">14m ago</span>
-                    </div>
-                    <div style="font-size:12.5px;font-weight:500">Pattern: 5 low check‑ins · Grade 11</div>
-                    <div style="font-size:10.5px;color:var(--ink-500)">3 students · anonymous aggregate</div>
-                  </div>
-                  <div style="padding:12px 16px;border-bottom:1px solid var(--line-2);display:grid;gap:4px">
-                    <div style="display:flex;justify-content:space-between;align-items:center">
-                      <span style="font-size:10px;font-family:var(--font-mono);color:#ca8a04;font-weight:600;letter-spacing:0.06em">· WATCH · Absence</span>
-                      <span style="font-size:10px;color:var(--ink-400)">1h ago</span>
-                    </div>
-                    <div style="font-size:12.5px;font-weight:500">3 consecutive absences · Grade 7</div>
-                    <div style="font-size:10.5px;color:var(--ink-500)">Parent notified · awaiting reply</div>
-                  </div>
-                  <div style="padding:12px 16px;display:grid;gap:4px">
-                    <div style="display:flex;justify-content:space-between;align-items:center">
-                      <span style="font-size:10px;font-family:var(--font-mono);color:#ca8a04;font-weight:600;letter-spacing:0.06em">· WATCH · Ticket</span>
-                      <span style="font-size:10px;color:var(--ink-400)">3h ago</span>
-                    </div>
-                    <div style="font-size:12.5px;font-weight:500">Bullying report · Grade 8‑B</div>
-                    <div style="font-size:10.5px;color:var(--ink-500)">Escalated · SLA 18h remaining</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div style="border:1px solid var(--line-2);border-radius:12px;background:white;overflow:hidden">
-                <div style="padding:14px 16px;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;align-items:center">
-                  <div style="font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:-0.01em">Ticket management</div>
-                  <span style="font-size:10.5px;color:var(--ink-500)">17 open</span>
-                </div>
+            <div style="padding:14px 16px;overflow:hidden">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
                 <div>
-                  <div style="display:grid;grid-template-columns:1fr 60px 70px;padding:8px 16px;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-400);font-weight:500;border-bottom:1px solid var(--line-2);background:var(--bg)">
-                    <span>Subject</span><span>Priority</span><span>SLA</span>
+                  <div style="font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:-0.02em">Admin Dashboard</div>
+                  <div style="font-size:10px;color:var(--ink-400);margin-top:1px">Overview of your admin account</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                  <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;background:white;border:1px solid var(--line-2);border-radius:8px;font-size:10px;color:var(--ink-400);min-width:130px">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    Search…
                   </div>
-                  <div style="display:grid;grid-template-columns:1fr 60px 70px;padding:10px 16px;font-size:11.5px;border-bottom:1px solid var(--line-2);align-items:center">
-                    <div><div style="font-weight:500;color:var(--ink-900)">Bullying report · 8B</div><div style="color:var(--ink-400);font-size:10.5px">#TK‑8421</div></div>
-                    <span style="font-size:10px;padding:2px 8px;background:#fef2f2;color:#dc2626;border-radius:999px;font-weight:600;width:fit-content">High</span>
-                    <span style="color:var(--ink-500);font-size:10.5px">18h</span>
+                  <div style="width:26px;height:26px;border:1px solid var(--line-2);border-radius:8px;display:grid;place-items:center;background:white;color:var(--ink-500)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   </div>
-                  <div style="display:grid;grid-template-columns:1fr 60px 70px;padding:10px 16px;font-size:11.5px;border-bottom:1px solid var(--line-2);align-items:center">
-                    <div><div style="font-weight:500;color:var(--ink-900)">Parent meeting req.</div><div style="color:var(--ink-400);font-size:10.5px">#TK‑8420</div></div>
-                    <span style="font-size:10px;padding:2px 8px;background:#fffbeb;color:#ca8a04;border-radius:999px;font-weight:600;width:fit-content">Med</span>
-                    <span style="color:var(--ink-500);font-size:10.5px">2d</span>
-                  </div>
-                  <div style="display:grid;grid-template-columns:1fr 60px 70px;padding:10px 16px;font-size:11.5px;border-bottom:1px solid var(--line-2);align-items:center">
-                    <div><div style="font-weight:500;color:var(--ink-900)">Transport change</div><div style="color:var(--ink-400);font-size:10.5px">#TK‑8418</div></div>
-                    <span style="font-size:10px;padding:2px 8px;background:var(--bg-2);color:var(--ink-700);border-radius:999px;font-weight:600;width:fit-content">Low</span>
-                    <span style="color:var(--ink-500);font-size:10.5px">3d</span>
-                  </div>
-                  <div style="display:grid;grid-template-columns:1fr 60px 70px;padding:10px 16px;font-size:11.5px;align-items:center">
-                    <div><div style="font-weight:500;color:var(--ink-900)">Medical form · 9A</div><div style="color:var(--ink-400);font-size:10.5px">#TK‑8415</div></div>
-                    <span style="font-size:10px;padding:2px 8px;background:#fffbeb;color:#ca8a04;border-radius:999px;font-weight:600;width:fit-content">Med</span>
-                    <span style="color:var(--ink-500);font-size:10.5px">1d</span>
+                  <div style="position:relative;width:26px;height:26px;border:1px solid var(--line-2);border-radius:8px;display:grid;place-items:center;background:white;color:var(--ink-500)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <span style="position:absolute;top:-3px;right:-3px;background:#ef4444;color:white;font-size:8px;padding:1px 4px;border-radius:999px;font-weight:700;line-height:1">6</span>
                   </div>
                 </div>
               </div>
 
-              <div style="border:1px solid var(--line-2);border-radius:12px;padding:16px;background:white">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-                  <div style="font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:-0.01em">Student engagement by grade</div>
-                  <span style="font-size:10.5px;color:var(--ink-500)">This week</span>
+              <div style="border:1px solid var(--line-2);border-radius:10px;padding:12px;background:white;margin-bottom:10px">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+                  <div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:13px">SOS Alert Monitoring</div>
+                    <div style="font-size:9.5px;color:var(--ink-400);margin-top:1px">Monitor and respond to student SOS alerts in real time</div>
+                  </div>
+                  <div style="text-align:right;font-size:9px;color:var(--ink-400)">
+                    <div>Last Updated</div>
+                    <div style="font-weight:600;color:var(--ink-700)">11:58 AM</div>
+                  </div>
                 </div>
-                <div style="display:grid;gap:10px">
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 6</span><span style="color:var(--ink-500)">92%</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:92%;background:linear-gradient(90deg, var(--deep-700), var(--teal-500));border-radius:999px"></div></div>
+
+                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:10px">
+                  <div style="border:1px solid var(--line-2);border-radius:8px;padding:8px">
+                    <div style="width:22px;height:22px;border-radius:6px;background:#7c3aed;color:white;display:grid;place-items:center;margin-bottom:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:16px">24</div>
+                    <div style="font-size:8px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-top:2px">Total Posts</div>
                   </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 7</span><span style="color:var(--ink-500)">88%</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:88%;background:linear-gradient(90deg, var(--deep-700), var(--teal-500));border-radius:999px"></div></div>
+                  <div style="border:1px solid var(--line-2);border-radius:8px;padding:8px">
+                    <div style="width:22px;height:22px;border-radius:6px;background:#10b981;color:white;display:grid;place-items:center;margin-bottom:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:16px">24</div>
+                    <div style="font-size:8px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-top:2px">Total Diary</div>
                   </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 8</span><span style="color:var(--ink-500)">84%</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:84%;background:linear-gradient(90deg, var(--deep-700), var(--teal-500));border-radius:999px"></div></div>
+                  <div style="border:1px solid var(--line-2);border-radius:8px;padding:8px">
+                    <div style="width:22px;height:22px;border-radius:6px;background:#f59e0b;color:white;display:grid;place-items:center;margin-bottom:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg></div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:16px">0</div>
+                    <div style="font-size:8px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-top:2px">Total Story</div>
                   </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 9</span><span style="color:var(--ink-500)">76% ↓</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:76%;background:linear-gradient(90deg, #f59e0b, #ea580c);border-radius:999px"></div></div>
+                  <div style="border:1px solid var(--line-2);border-radius:8px;padding:8px">
+                    <div style="width:22px;height:22px;border-radius:6px;background:#ef4444;color:white;display:grid;place-items:center;margin-bottom:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:16px">13</div>
+                    <div style="font-size:8px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-top:2px">Total SOS</div>
                   </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 10</span><span style="color:var(--ink-500)">81%</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:81%;background:linear-gradient(90deg, var(--deep-700), var(--teal-500));border-radius:999px"></div></div>
+                  <div style="border:1px solid var(--line-2);border-radius:8px;padding:8px">
+                    <div style="width:22px;height:22px;border-radius:6px;background:#FF8800;color:white;display:grid;place-items:center;margin-bottom:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+                    <div style="font-family:var(--font-display);font-weight:700;font-size:16px">51</div>
+                    <div style="font-size:8px;color:var(--ink-400);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-top:2px">AI Flagged</div>
                   </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--ink-700);font-weight:500">Grade 11</span><span style="color:var(--ink-500)">79%</span></div>
-                    <div style="height:8px;background:var(--bg-2);border-radius:999px;overflow:hidden"><div style="height:100%;width:79%;background:linear-gradient(90deg, var(--deep-700), var(--teal-500));border-radius:999px"></div></div>
+                </div>
+
+                <div style="border:1px solid #fecaca;background:#fff1f2;border-radius:10px;padding:10px">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <span style="display:inline-flex;align-items:center;gap:4px;background:#fecaca;color:#b91c1c;font-size:8.5px;font-weight:700;padding:2px 6px;border-radius:999px;letter-spacing:0.08em">
+                        <span style="width:5px;height:5px;border-radius:999px;background:#dc2626"></span>SOS ACTIVE
+                      </span>
+                      <span style="font-size:10px;color:var(--ink-700);font-weight:600">6 students pressed the SOS button — Immediate response required</span>
+                    </div>
+                    <span style="font-size:9px;color:#b91c1c;font-weight:500">Last updated 11:58 AM</span>
+                  </div>
+
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                    <div style="background:white;border:1px solid #fecaca;border-radius:8px;padding:9px">
+                      <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                        <span style="font-size:11px;font-weight:700;color:var(--ink-900)">Ali Azri Bin Zainol</span>
+                        <span style="background:#fecaca;color:#b91c1c;font-size:8px;font-weight:700;padding:1px 5px;border-radius:4px">SOS BUTTON</span>
+                      </div>
+                      <div style="font-size:10px;color:var(--ink-700);margin-bottom:4px">Tolong…</div>
+                      <div style="font-size:8.5px;color:var(--ink-400);margin-bottom:6px">School hall · Apr 20 · 05:55 AM · Emergency</div>
+                      <div style="display:flex;gap:4px">
+                        <span style="background:#dc2626;color:white;font-size:8.5px;font-weight:600;padding:3px 7px;border-radius:5px">View Full Profile</span>
+                        <span style="background:white;border:1px solid var(--line-2);color:var(--ink-700);font-size:8.5px;padding:3px 7px;border-radius:5px">Create Case</span>
+                        <span style="background:white;border:1px solid var(--line-2);color:var(--ink-700);font-size:8.5px;padding:3px 7px;border-radius:5px">Call Parent</span>
+                      </div>
+                    </div>
+                    <div style="background:white;border:1px solid #fecaca;border-radius:8px;padding:9px">
+                      <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                        <span style="font-size:11px;font-weight:700;color:var(--ink-900)">Daniel Haqim Bin Reza</span>
+                        <span style="background:#fecaca;color:#b91c1c;font-size:8px;font-weight:700;padding:1px 5px;border-radius:4px">SOS BUTTON</span>
+                      </div>
+                      <div style="font-size:10px;color:var(--ink-700);margin-bottom:4px">Argument at home getting worse. I feel unsafe.</div>
+                      <div style="font-size:8.5px;color:var(--ink-400);margin-bottom:6px">SMK Taman Melawati · Apr 15 · 02:06 AM · Emergency</div>
+                      <div style="display:flex;gap:4px">
+                        <span style="background:#dc2626;color:white;font-size:8.5px;font-weight:600;padding:3px 7px;border-radius:5px">View Full Profile</span>
+                        <span style="background:white;border:1px solid var(--line-2);color:var(--ink-700);font-size:8.5px;padding:3px 7px;border-radius:5px">Create Case</span>
+                        <span style="background:white;border:1px solid var(--line-2);color:var(--ink-400);font-size:8.5px;padding:3px 7px;border-radius:5px">Call Parent</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:9px;color:#b91c1c">
+                    <span style="padding:2px 8px;border:1px solid #fecaca;border-radius:5px;background:white">← Prev</span>
+                    <span>5–6 of 6 alerts</span>
+                    <span style="padding:2px 8px;border:1px solid #fecaca;border-radius:5px;background:white;color:var(--ink-400)">Next →</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1826,7 +1817,7 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
         <h4 class="why-title">Safe communication</h4>
-        <p class="why-copy">End-to-end encrypted channels, role-based access, audit trails, and child-safety filters — by default, everywhere.</p>
+        <p class="why-copy">Role-based access, audit trails, and child-safety filters — by default, everywhere.</p>
         <div class="why-metric">100% <small>encrypted by default</small></div>
       </div>
       <div class="why-card">
@@ -1851,66 +1842,36 @@
   </div>
 </section>
 
-<!-- ========== TESTIMONIALS ========== -->
-<section id="trust" style="padding-top:60px">
-  <div class="container">
-    <div class="sec-head-center">
-      <div class="sec-eyebrow">Voices from the ground</div>
-      <h2 class="sec-title">Schools, counsellors and ministries who lead with care.</h2>
-    </div>
-
-    <div class="trust-grid">
-      <figure class="testimonial featured">
-        <blockquote class="t-quote">“Before OCare, safeguarding was a fire drill. Now it's a practice — woven into the rhythm of the school day. We caught three students who were quietly struggling, before any of us knew.”</blockquote>
-        <figcaption class="t-meta">
-          <div class="t-ava" aria-hidden="true">DS</div>
-          <div>
-            <p class="t-name">Dr. Deepa Shastri</p>
-            <p class="t-role">Principal · Meridian Prep, Bengaluru</p>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote class="t-quote">“The anonymous diary broke down a wall I didn't know was there. For the first time, students come to us — not the other way around.”</blockquote>
-        <figcaption class="t-meta">
-          <div class="t-ava" aria-hidden="true">RK</div>
-          <div>
-            <p class="t-name">Ravi Khanna</p>
-            <p class="t-role">Lead Counsellor · Northfield Trust</p>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote class="t-quote">“Replaced six apps with one. Parent engagement is up 40% and our response times are, quite literally, instant.”</blockquote>
-        <figcaption class="t-meta">
-          <div class="t-ava" aria-hidden="true">AN</div>
-          <div>
-            <p class="t-name">Aditi Nair</p>
-            <p class="t-role">Director of IT · Atlas Academy Group</p>
-          </div>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- ========== FINAL CTA ========== -->
 <section class="final-cta" id="cta">
   <div class="container">
     <div class="final-cta-inner">
-      <div class="eyebrow" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.14)">
+      <div class="eyebrow" style="background:rgba(61,31,0,0.06);color:#743C00;box-shadow:inset 0 0 0 1px rgba(61,31,0,0.14)">
         <span class="dot" aria-hidden="true">◆</span>
-        <span>Ready in <b style="color:white">under 2 weeks</b> · onboarding included</span>
+        <span>Ready in <b style="color:#FF8800">under 2 weeks</b> · onboarding included</span>
       </div>
       <h2>Transform student care<br>with smarter communication.</h2>
-      <p>Schedule a 30-minute walkthrough with our education team. See exactly how OCare would look rolled out across your school or district.</p>
+      <p>Get OCare on your phone in minutes. One secure space for messaging, mood check‑ins, anonymous diary and one‑tap SOS — for every student, parent and teacher.</p>
       <div class="hero-cta" style="justify-content:center">
-        <a href="mailto:hello@ocare.io?subject=OCare%20demo%20request" class="btn btn-light">
-          Download App
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="mailto:sales@ocare.io" class="btn" style="color:white;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.22);background:rgba(255,255,255,0.04);backdrop-filter:blur(6px)">
-          Contact sales
+        <details class="store-menu">
+          <summary class="btn btn-light">
+            Download App
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="store-pop">
+            <!-- TODO: swap to exact App Store / Google Play app URLs -->
+            <a class="store-link" href="https://apps.apple.com/" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.13 2.99-.78.87-2.05 1.54-3.12 1.46-.13-1.1.42-2.27 1.07-2.99.78-.86 2.14-1.5 3.18-1.46zM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.01-1.93-.99-4.02-.98-2.09.01-2.52.99-4.06.98-1.73-.02-3.06-1.78-4.05-3.34C-.07 16.97-.4 12.07 1.27 9.4 2.43 7.5 4.31 6.34 6.08 6.34c1.8 0 2.93 1 4.42 1 1.44 0 2.32-1 4.4-1 1.57 0 3.24.86 4.42 2.34-3.88 2.13-3.25 7.68 1.18 8.52z"/></svg>
+              <span><small>Download on the</small><b>App Store</b></span>
+            </a>
+            <a class="store-link" href="https://play.google.com/store/apps" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2.5v19a.5.5 0 0 0 .76.43l16.5-9.5a.5.5 0 0 0 0-.86L3.76 2.07A.5.5 0 0 0 3 2.5z"/></svg>
+              <span><small>Get it on</small><b>Google Play</b></span>
+            </a>
+          </div>
+        </details>
+        <a href="#showcase" class="btn btn-ghost">
+          See the product
         </a>
       </div>
       <div style="display:flex;gap:30px;justify-content:center;margin-top:32px;color:rgba(255,255,255,0.65);font-size:13px;flex-wrap:wrap">
@@ -1934,17 +1895,6 @@
           <span>OCare</span>
         </a>
         <p class="foot-about">The school communication &amp; well‑being platform trusted by educators across 14 countries. Built with care, for care.</p>
-        <div style="display:flex;gap:10px;margin-top:20px">
-          <a href="#" aria-label="Twitter" style="width:34px;height:34px;border-radius:9px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-500)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" style="width:34px;height:34px;border-radius:9px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-500)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="#" aria-label="GitHub" style="width:34px;height:34px;border-radius:9px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-500)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.162 22 16.417 22 12c0-5.523-4.477-10-10-10z"/></svg>
-          </a>
-        </div>
       </div>
       <div class="foot-col">
         <h5>Platform</h5>
@@ -1953,37 +1903,14 @@
           <li><a href="#showcase">Admin dashboard</a></li>
           <li><a href="#solution">Mood analytics</a></li>
           <li><a href="#solution">SOS &amp; alerts</a></li>
-          <li><a href="#cta">Integrations</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h5>Solutions</h5>
-        <ul>
-          <li><a href="#cta">K‑12 Schools</a></li>
-          <li><a href="#cta">Universities</a></li>
-          <li><a href="#cta">Government</a></li>
-          <li><a href="#cta">Counsellors</a></li>
-          <li><a href="#cta">Parent councils</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="#trust">Case studies</a></li>
-          <li><a href="#cta">Safeguarding guides</a></li>
-          <li><a href="#cta">API documentation</a></li>
-          <li><a href="#cta">Trust center</a></li>
-          <li><a href="#cta">Changelog</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="#cta">About</a></li>
-          <li><a href="#cta">Careers</a></li>
-          <li><a href="#cta">Partners</a></li>
-          <li><a href="#cta">Press</a></li>
-          <li><a href="mailto:hello@ocare.io">Contact</a></li>
+          <li><a href="#problem">Why OCare</a></li>
+          <li><a href="#showcase">Product</a></li>
+          <li><a href="mailto:support@ocare.ocgt.app">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -1993,9 +1920,6 @@
         <a href="/privacy" target="_blank" rel="noopener">Privacy</a>
         <a href="/terms" target="_blank" rel="noopener">Terms</a>
         <a href="/eula" target="_blank" rel="noopener">EULA</a>
-        <a href="#">DPDP</a>
-        <a href="#">Cookies</a>
-        <a href="#">Accessibility</a>
       </div>
     </div>
   </div>
@@ -2003,16 +1927,19 @@
 
 <script>
   (function(){
+    document.documentElement.classList.add('js');
+
     var navEl = document.getElementById('navWrap');
-    if (!navEl) return;
-    var ticking = false;
-    function update() {
-      navEl.classList.toggle('scrolled', window.scrollY > 8);
-      ticking = false;
+    if (navEl) {
+      var ticking = false;
+      var update = function() {
+        navEl.classList.toggle('scrolled', window.scrollY > 8);
+        ticking = false;
+      };
+      window.addEventListener('scroll', function() {
+        if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
     }
-    window.addEventListener('scroll', function() {
-      if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
-    }, { passive: true });
 
     var tabs = document.querySelectorAll('.showcase-tab');
     tabs.forEach(function(t){
@@ -2022,6 +1949,27 @@
         t.setAttribute('aria-selected','true');
       });
     });
+
+    /* staggered scroll reveal */
+    var sel = '.sec-head, .sec-head-center, .hero-copy, .hero-visual, .logo-strip-inner, .prob-card, .feat-row, .sol-mock, .mini-phone, .why-card, .testimonial, .final-cta-inner';
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    els.forEach(function(el){ el.classList.add('reveal'); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          var sibs = el.parentNode ? Array.prototype.slice.call(el.parentNode.children).filter(function(c){ return c.classList && c.classList.contains('reveal'); }) : [el];
+          var idx = sibs.indexOf(el);
+          el.style.transitionDelay = (idx > 0 ? idx * 80 : 0) + 'ms';
+          el.classList.add('in');
+          io.unobserve(el);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      els.forEach(function(el){ el.classList.add('in'); });
+    }
   })();
 </script>
 
