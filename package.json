@@ -9,6 +9,6 @@
     "deploy:preview": "wrangler pages deploy . --project-name ocare-landing --branch preview"
   },
   "devDependencies": {
-    "wrangler": "^3.78.0"
+    "wrangler": "^4.106.0"
   }
 }
